@@ -1,0 +1,24 @@
+<div class="pb-5">
+  <h1>Oitavo mandamento</h1>
+
+  <h3>
+    Não levantar falso testemunho nem de qualquer outro modo faltar à verdade ou
+    difamar o próximo.
+  </h3>
+
+  <p *ngFor="let pecado of mandamentos.pecados">
+    <mat-checkbox color="primary" [(ngModel)]="pecado.selecionado">
+      {{ pecado.texto }}
+    </mat-checkbox>
+  </p>
+</div>
+
+<div class="options">
+  <button mat-flat-button [routerLink]="['/checklist/setimo-e-decimo-mandamentos']">
+    Voltar
+  </button>
+
+  <button mat-flat-button color="primary" routerLink="/checklist/imprimir">
+    Finalizar
+  </button>
+</div>

@@ -1,3 +1,54 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<header>
+  <mat-toolbar color="accent">
+    <span style="flex: 1"> A Sagrada Confissão </span>
+    <div *ngIf="!isMobile; else mobileMenu">
+      <button mat-button routerLink="confissao">A Confissão</button>
+      <button mat-button routerLink="perguntas">Perguntas</button>
+      <button mat-button routerLink="dicas">Dicas</button>
+      <button mat-button routerLink="checklist/primeiro-mandamento">Checklist</button>
+    </div>
+
+    <ng-template #mobileMenu>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="confissao">
+          <span>A Confissão</span>
+        </button>
+        <button mat-menu-item routerLink="perguntas">
+          <span>Perguntas</span>
+        </button>
+        <button mat-menu-item routerLink="dicas">
+          <span>Dicas</span>
+        </button>
+        <button mat-menu-item routerLink="checklist/primeiro-mandamento">
+          <span>Checklist</span>
+        </button>
+      </mat-menu>
+    </ng-template>
+  </mat-toolbar>
+
+  <mat-progress-bar mode="determinate" [value]="progress" color="primary" *ngIf="progress != 0"></mat-progress-bar>
+</header>
+<div class="container-lg">
+  <router-outlet (activate)="onActivate()"></router-outlet>
+
+  <footer class="mt-5">
+    <p>
+      Sistema desenvolvido por Nicolas Soares Henrique
+    </p>
+
+    <p>
+      LinkedIn: https://www.linkedin.com/in/nicolas-soares-henrique/
+    </p>
+
+    <p>
+      Possui alguma sugestão ou feedback? Entre em contato:
+    </p>
+
+    <p>
+      (48) 98468-9248
+    </p>
+  </footer>
+</div>

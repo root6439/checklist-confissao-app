@@ -31,8 +31,13 @@
                 "output": "assets"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
-            "scripts": []
+            "styles": [
+              "bootstrap/dist/css/bootstrap.min.css",
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/global.scss",
+              "src/theme/variables.scss"
+            ],
+            "scripts": ["bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -106,8 +111,13 @@
                 "output": "assets"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
-            "scripts": []
+            "styles": [
+              "bootstrap/dist/css/bootstrap.min.css",
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/global.scss",
+              "src/theme/variables.scss"
+            ],
+            "scripts": ["bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "ci": {
