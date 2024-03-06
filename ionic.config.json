@@ -1,0 +1,7 @@
+{
+  "name": "checklist-confissao",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
