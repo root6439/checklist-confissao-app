@@ -1,44 +1,46 @@
-<div class="pb-5">
-  <h1>Primeiro mandamento</h1>
+<ion-content class="ion-padding">
+  <div class="pb-5">
+    <h1>Primeiro mandamento</h1>
 
-  <h3>"Eu sou o Senhor Teu Deus, não terás outro Deus diante de Mim."</h3>
+    <h3>"Eu sou o Senhor Teu Deus, não terás outro Deus diante de Mim."</h3>
 
-  <p *ngFor="let pecado of mandamentos.pecados">
-    <mat-checkbox
-      color="primary"
-      color="primary"
-      [(ngModel)]="pecado.selecionado"
-    >
-      {{ pecado.texto }}
-    </mat-checkbox>
-  </p>
-</div>
+    <p *ngFor="let pecado of mandamentos.pecados">
+      <mat-checkbox
+        color="primary"
+        color="primary"
+        [(ngModel)]="pecado.selecionado"
+      >
+        {{ pecado.texto }}
+      </mat-checkbox>
+    </p>
+  </div>
 
-<div class="options">
-  <button
-    mat-flat-button
-    color="primary"
-    [routerLink]="['/checklist/segundo-mandamento']"
-  >
-    Avançar
-    <mat-icon> keyboard_arrow_right </mat-icon>
-  </button>
-
-  <button
-    mat-button
-    [matMenuTriggerFor]="menu"
-    [disabled]="service.somePecadoSelected()"
-  >
-    Limpar
-  </button>
-  <mat-menu #menu="matMenu">
+  <div class="options">
     <button
-      mat-menu-item
-      (click)="service.clearMandament(mandamentos)"
-      [disabled]="service.atLeastOneSelected(mandamentos)"
+      mat-flat-button
+      color="primary"
+      [routerLink]="['/checklist/segundo-mandamento']"
     >
-      Limpar este mandamento
+      Avançar
+      <mat-icon> keyboard_arrow_right </mat-icon>
     </button>
-    <button mat-menu-item (click)="service.clearAll()">Limpar tudo</button>
-  </mat-menu>
-</div>
+
+    <button
+      mat-button
+      [matMenuTriggerFor]="menu"
+      [disabled]="service.somePecadoSelected()"
+    >
+      Limpar
+    </button>
+    <mat-menu #menu="matMenu">
+      <button
+        mat-menu-item
+        (click)="service.clearMandament(mandamentos)"
+        [disabled]="service.atLeastOneSelected(mandamentos)"
+      >
+        Limpar este mandamento
+      </button>
+      <button mat-menu-item (click)="service.clearAll()">Limpar tudo</button>
+    </mat-menu>
+  </div>
+</ion-content>

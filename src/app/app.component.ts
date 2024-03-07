@@ -7,6 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CommonModule } from '@angular/common';
+import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +23,8 @@ import { CommonModule } from '@angular/common';
     MatProgressBarModule,
     RouterModule,
     CommonModule,
+    IonRouterOutlet,
+    IonicModule,
   ],
 })
 export class AppComponent implements OnInit {

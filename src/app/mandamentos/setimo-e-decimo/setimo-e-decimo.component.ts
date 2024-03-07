@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { IonContent } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-setimo-e-decimo',
@@ -23,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
+    IonContent,
   ],
 })
 export class SetimoEDecimoComponent implements OnDestroy {

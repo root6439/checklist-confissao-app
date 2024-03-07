@@ -90,7 +90,7 @@
       },
       {
         "file": "android/app/build.gradle",
-        "hash": "3184173191601308496"
+        "hash": "6195239877546165311"
       },
       {
         "file": "android/app/capacitor.build.gradle",
@@ -110,7 +110,7 @@
       },
       {
         "file": "android/app/src/main/java/io/ionic/starter/MainActivity.java",
-        "hash": "339761706537814219"
+        "hash": "7720797632820771204"
       },
       {
         "file": "android/app/src/main/res/drawable-land-hdpi/splash.png",
@@ -242,7 +242,7 @@
       },
       {
         "file": "android/app/src/main/res/values/strings.xml",
-        "hash": "14085860294509541835"
+        "hash": "5597059658657509057"
       },
       {
         "file": "android/app/src/main/res/values/styles.xml",
@@ -298,11 +298,11 @@
       },
       {
         "file": "angular.json",
-        "hash": "17226566959587492556"
+        "hash": "711491552795491318"
       },
       {
         "file": "capacitor.config.ts",
-        "hash": "5357966921813207790"
+        "hash": "14514897671775122308"
       },
       {
         "file": "ionic.config.json",
@@ -314,11 +314,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "14814249304877825221"
+        "hash": "12202231989755868194"
       },
       {
         "file": "package.json",
-        "hash": "15674395053559382362"
+        "hash": "9563962290681566467"
       },
       {
         "file": "src/app-config.ts",
@@ -330,7 +330,7 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "3907637737520055308"
+        "hash": "8608748991206546680"
       },
       {
         "file": "src/app/app.component.scss",
@@ -342,7 +342,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "12980971597312840442"
+        "hash": "9250308305258984870"
       },
       {
         "file": "src/app/confissao/confissao.component.html",
@@ -619,6 +619,10 @@
       {
         "file": "src/test.ts",
         "hash": "7876741224155508608"
+      },
+      {
+        "file": "src/theme/variables.css",
+        "hash": "14326193929875254985"
       },
       {
         "file": "src/theme/variables.scss",
