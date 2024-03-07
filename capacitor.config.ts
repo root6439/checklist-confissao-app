@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'checklist.confissao.app',
   appName: 'checklist-confissao',
   webDir: 'www',
   server: {

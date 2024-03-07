@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package checklist.confissao.app;
 
 import com.getcapacitor.BridgeActivity;
 
