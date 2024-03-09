@@ -1,6 +1,6 @@
 import { QUARTO_MANDAMENTO } from './../../shared/data/QuartoMandamento';
 import { Mandamento } from './../../shared/models/Mandamento';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { MandamentosService } from '../mandamentos.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';

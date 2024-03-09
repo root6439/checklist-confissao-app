@@ -15,14 +15,11 @@
     "@capacitor/android": "^5.7.1",
     "@capacitor/app": "5.0.7",
     "@capacitor/core": "5.7.1",
-    "@capacitor/filesystem": "^5.2.1",
     "@capacitor/haptics": "5.0.7",
     "@capacitor/keyboard": "5.0.8",
-    "@capacitor/share": "^5.0.7",
     "@capacitor/status-bar": "5.0.7",
     "@ionic/angular": "^7.5.0",
     "bootstrap": "^5.3.3",
-    "html-to-image": "^1.11.11",
     "ionicons": "^7.2.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -93,11 +90,11 @@
       },
       {
         "file": "android/app/build.gradle",
-        "hash": "17587970672791402988"
+        "hash": "6195239877546165311"
       },
       {
         "file": "android/app/capacitor.build.gradle",
-        "hash": "14172011743612976884"
+        "hash": "321577693221425197"
       },
       {
         "file": "android/app/proguard-rules.pro",
@@ -109,7 +106,7 @@
       },
       {
         "file": "android/app/src/main/AndroidManifest.xml",
-        "hash": "6330436802758165450"
+        "hash": "1154185190241325410"
       },
       {
         "file": "android/app/src/main/java/io/ionic/starter/MainActivity.java",
@@ -265,7 +262,7 @@
       },
       {
         "file": "android/capacitor.settings.gradle",
-        "hash": "14345163513266079685"
+        "hash": "14622451423594914531"
       },
       {
         "file": "android/gradle.properties",
@@ -317,11 +314,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "5207858796937401418"
+        "hash": "12202231989755868194"
       },
       {
         "file": "package.json",
-        "hash": "8344801984396561184"
+        "hash": "9563962290681566467"
       },
       {
         "file": "src/app-config.ts",
@@ -333,11 +330,11 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "1512582295122648582"
+        "hash": "8608748991206546680"
       },
       {
         "file": "src/app/app.component.scss",
-        "hash": "13143133421079472785"
+        "hash": "5910739321150967595"
       },
       {
         "file": "src/app/app.component.spec.ts",
@@ -345,11 +342,11 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "3731037289720429832"
+        "hash": "9250308305258984870"
       },
       {
         "file": "src/app/confissao/confissao.component.html",
-        "hash": "7101424154441162071"
+        "hash": "3680061224713827148"
       },
       {
         "file": "src/app/confissao/confissao.component.scss",
@@ -361,11 +358,11 @@
       },
       {
         "file": "src/app/confissao/confissao.component.ts",
-        "hash": "7805344071945663339"
+        "hash": "14742004860693871437"
       },
       {
         "file": "src/app/dicas/dicas.component.html",
-        "hash": "12985981615656797919"
+        "hash": "11639037842788399637"
       },
       {
         "file": "src/app/dicas/dicas.component.scss",
@@ -377,11 +374,11 @@
       },
       {
         "file": "src/app/dicas/dicas.component.ts",
-        "hash": "3597215382213311583"
+        "hash": "13529096307032352709"
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.html",
-        "hash": "5017127649705440895"
+        "hash": "11272548985298168370"
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.scss",
@@ -393,7 +390,7 @@
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.ts",
-        "hash": "2371584653688580713"
+        "hash": "12172358105785792194"
       },
       {
         "file": "src/app/mandamentos/mandamentos.routes.ts",
@@ -409,7 +406,7 @@
       },
       {
         "file": "src/app/mandamentos/oitavo/oitavo.component.html",
-        "hash": "18085062401841908722"
+        "hash": "11104446584288448639"
       },
       {
         "file": "src/app/mandamentos/oitavo/oitavo.component.scss",
@@ -421,11 +418,11 @@
       },
       {
         "file": "src/app/mandamentos/oitavo/oitavo.component.ts",
-        "hash": "2373844033546731856"
+        "hash": "16836010234381233925"
       },
       {
         "file": "src/app/mandamentos/primeiro/primeiro.component.html",
-        "hash": "13893565861402413631"
+        "hash": "11428224749646846333"
       },
       {
         "file": "src/app/mandamentos/primeiro/primeiro.component.scss",
@@ -437,11 +434,11 @@
       },
       {
         "file": "src/app/mandamentos/primeiro/primeiro.component.ts",
-        "hash": "11014620719407836971"
+        "hash": "16065829305421022640"
       },
       {
         "file": "src/app/mandamentos/quarto/quarto.component.html",
-        "hash": "9366776248215568659"
+        "hash": "4450200975080119391"
       },
       {
         "file": "src/app/mandamentos/quarto/quarto.component.scss",
@@ -453,11 +450,11 @@
       },
       {
         "file": "src/app/mandamentos/quarto/quarto.component.ts",
-        "hash": "7191027708780434732"
+        "hash": "6427365839437391685"
       },
       {
         "file": "src/app/mandamentos/quinto/quinto.component.html",
-        "hash": "15811272885381385974"
+        "hash": "16681006905738899641"
       },
       {
         "file": "src/app/mandamentos/quinto/quinto.component.scss",
@@ -469,11 +466,11 @@
       },
       {
         "file": "src/app/mandamentos/quinto/quinto.component.ts",
-        "hash": "9309936191886444604"
+        "hash": "3967574397786087717"
       },
       {
         "file": "src/app/mandamentos/segundo/segundo.component.html",
-        "hash": "883236415149568391"
+        "hash": "6055694920258916600"
       },
       {
         "file": "src/app/mandamentos/segundo/segundo.component.scss",
@@ -485,11 +482,11 @@
       },
       {
         "file": "src/app/mandamentos/segundo/segundo.component.ts",
-        "hash": "10398597268751189640"
+        "hash": "3598570202151181660"
       },
       {
         "file": "src/app/mandamentos/setimo-e-decimo/setimo-e-decimo.component.html",
-        "hash": "10638277933512187653"
+        "hash": "10424580878103953369"
       },
       {
         "file": "src/app/mandamentos/setimo-e-decimo/setimo-e-decimo.component.scss",
@@ -501,11 +498,11 @@
       },
       {
         "file": "src/app/mandamentos/setimo-e-decimo/setimo-e-decimo.component.ts",
-        "hash": "1908333214026116020"
+        "hash": "18151819794302293017"
       },
       {
         "file": "src/app/mandamentos/sexto-enono/sexto-enono.component.html",
-        "hash": "941633382604947999"
+        "hash": "2269840998110919462"
       },
       {
         "file": "src/app/mandamentos/sexto-enono/sexto-enono.component.scss",
@@ -517,11 +514,11 @@
       },
       {
         "file": "src/app/mandamentos/sexto-enono/sexto-enono.component.ts",
-        "hash": "5820951243057150050"
+        "hash": "4012502140453442251"
       },
       {
         "file": "src/app/mandamentos/terceiro/terceiro.component.html",
-        "hash": "12011630295940756551"
+        "hash": "15048588589826905633"
       },
       {
         "file": "src/app/mandamentos/terceiro/terceiro.component.scss",
@@ -533,11 +530,11 @@
       },
       {
         "file": "src/app/mandamentos/terceiro/terceiro.component.ts",
-        "hash": "795822690340258667"
+        "hash": "16147484814802556618"
       },
       {
         "file": "src/app/perguntas/perguntas.component.html",
-        "hash": "6989625367086056655"
+        "hash": "6462457574912471611"
       },
       {
         "file": "src/app/perguntas/perguntas.component.scss",
@@ -549,7 +546,7 @@
       },
       {
         "file": "src/app/perguntas/perguntas.component.ts",
-        "hash": "6654657771543917724"
+        "hash": "337143257392048742"
       },
       {
         "file": "src/app/shared/data/OitavoMandamento.ts",
@@ -613,7 +610,7 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "7895916198541786987"
+        "hash": "8121793223155966882"
       },
       {
         "file": "src/polyfills.ts",

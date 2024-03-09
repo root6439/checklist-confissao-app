@@ -1486,15 +1486,6 @@
         "hash": "sha512-bwmka6FdvyXOpc5U6bOyx58S/Yl6r5lO2TK561f//KnjyXjxav25HWwhV4hthq3ZxJBMiAEucl9RK5vzgkP4Lw=="
       }
     },
-    "npm:@capacitor/filesystem": {
-      "type": "npm",
-      "name": "npm:@capacitor/filesystem",
-      "data": {
-        "version": "5.2.1",
-        "packageName": "@capacitor/filesystem",
-        "hash": "sha512-mexkJHUbNhydzfJywEUTIGARlB/HRogrtbjCZdA+mQxOi07T2887a70CwFaYRu1nKLMoKoliTM5UsLSsdl0PlA=="
-      }
-    },
     "npm:@capacitor/haptics": {
       "type": "npm",
       "name": "npm:@capacitor/haptics",
@@ -1511,15 +1502,6 @@
         "version": "5.0.8",
         "packageName": "@capacitor/keyboard",
         "hash": "sha512-XYyBzGlzjgLPqyPVdu5McGLYV6+G2efVR4I3l5cF1B27M6U/oFqv9CQU74WNG08nee28bfccboNpv6eWCLYn1A=="
-      }
-    },
-    "npm:@capacitor/share": {
-      "type": "npm",
-      "name": "npm:@capacitor/share",
-      "data": {
-        "version": "5.0.7",
-        "packageName": "@capacitor/share",
-        "hash": "sha512-4GraggRRxwhstxIdF9JyOEBq4QTufqFOekdB4P9GeiQYWJoA5VraSR1mwy4Trke1VFfaBjz/nGi4WQOJdHIAgg=="
       }
     },
     "npm:@capacitor/status-bar": {
@@ -6902,15 +6884,6 @@
         "version": "2.0.2",
         "packageName": "html-escaper",
         "hash": "sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg=="
-      }
-    },
-    "npm:html-to-image": {
-      "type": "npm",
-      "name": "npm:html-to-image",
-      "data": {
-        "version": "1.11.11",
-        "packageName": "html-to-image",
-        "hash": "sha512-9gux8QhvjRO/erSnDPv28noDZcPZmYE7e1vFsBLKLlRlKDSqNJYebj6Qz1TGd5lsRV+X+xYyjCKjuZdABinWjA=="
       }
     },
     "npm:htmlparser2": {
@@ -14250,13 +14223,6 @@
         "type": "static"
       }
     ],
-    "npm:@capacitor/filesystem": [
-      {
-        "source": "npm:@capacitor/filesystem",
-        "target": "npm:@capacitor/core",
-        "type": "static"
-      }
-    ],
     "npm:@capacitor/haptics": [
       {
         "source": "npm:@capacitor/haptics",
@@ -14267,13 +14233,6 @@
     "npm:@capacitor/keyboard": [
       {
         "source": "npm:@capacitor/keyboard",
-        "target": "npm:@capacitor/core",
-        "type": "static"
-      }
-    ],
-    "npm:@capacitor/share": [
-      {
-        "source": "npm:@capacitor/share",
         "target": "npm:@capacitor/core",
         "type": "static"
       }

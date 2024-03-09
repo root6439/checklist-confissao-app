@@ -11,6 +11,7 @@ import { environment } from './environments/environment';
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { IonicModule } from '@ionic/angular';
+import { MandamentosService } from './app/mandamentos/mandamentos.service';
 
 if (environment.production) {
   enableProdMode();
@@ -23,5 +24,6 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes),
     provideAnimationsAsync(),
     importProvidersFrom(IonicModule.forRoot({})),
+    MandamentosService
   ],
 });
