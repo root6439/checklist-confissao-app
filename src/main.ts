@@ -24,6 +24,6 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes),
     provideAnimationsAsync(),
     importProvidersFrom(IonicModule.forRoot({})),
-    MandamentosService
+    MandamentosService,
   ],
 });

@@ -10,7 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "android-run": "ionic build && npx cap copy && npx cap sync android && npx cap run android",
+    "android": "ionic build && npx cap copy && npx cap sync android && npx cap run android --target=Pixel_3a_API_34_extension_level_7_x86_64",
     "android-build": "ionic build && npx cap copy && npx cap sync android"
   },
   "private": true,
@@ -35,8 +35,12 @@
     "@capacitor/status-bar": "5.0.7",
     "@ionic/angular": "^7.5.0",
     "bootstrap": "^5.3.3",
+    "dom-to-image": "^2.6.0",
     "html-to-image": "^1.11.11",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.1",
     "ionicons": "^7.2.1",
+    "jspdf": "^2.5.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
@@ -52,7 +56,8 @@
     "@angular/compiler-cli": "^17.0.2",
     "@angular/language-service": "^17.0.2",
     "@capacitor/cli": "5.7.1",
-    "@ionic/angular-toolkit": "^9.0.0",
+    "@ionic/angular-toolkit": "11.0.1",
+    "@types/dom-to-image": "^2.6.7",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -69,5 +74,13 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "browserslist": [
+    "Chrome >=79",
+    "ChromeAndroid >=79",
+    "Firefox >=70",
+    "Edge >=79",
+    "Safari >=14",
+    "iOS >=14"
+  ]
 }

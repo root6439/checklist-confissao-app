@@ -9,9 +9,7 @@ import { PrimeiroMandamento } from './../shared/data/PrimeiroMandamento';
 import { Mandamento, Pecado } from './../shared/models/Mandamento';
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class MandamentosService {
   mandamentos: Mandamento[] = [
     PrimeiroMandamento,
