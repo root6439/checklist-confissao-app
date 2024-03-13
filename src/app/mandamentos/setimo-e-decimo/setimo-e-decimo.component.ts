@@ -27,12 +27,12 @@ import { IonContent } from '@ionic/angular/standalone';
     IonContent,
   ],
 })
-export class SetimoEDecimoComponent implements OnDestroy {
+export class SetimoEDecimoComponent {
   mandamentos: Mandamento = SETIMO_E_DECIMO_MANDAMENTOS;
 
   constructor(public service: MandamentosService) {}
 
-  ngOnDestroy(): void {
+  setPecados() {
     let selecionados: string[] = this.mandamentos.pecados
       .filter((value) => value.selecionado)
       .map((value) => value.texto);

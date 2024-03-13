@@ -27,21 +27,10 @@ import { IonContent } from '@ionic/angular/standalone';
     IonContent,
   ],
 })
-export class SegundoComponent implements OnDestroy {
+export class SegundoComponent {
   mandamentos: Mandamento = SEGUNDO_MANDAMENTO;
 
   constructor(public service: MandamentosService) {}
-
-  ngOnDestroy(): void {
-    let selecionados: string[] = this.mandamentos.pecados
-      .filter((value) => value.selecionado)
-      .map((value) => value.texto);
-
-    this.service.pecadosSelecionados = new Set([
-      ...this.service.pecadosSelecionados,
-      ...selecionados,
-    ]);
-  }
 
   clearMandament(): void {
     this.mandamentos.pecados.forEach((value: Pecado) => {
@@ -51,5 +40,16 @@ export class SegundoComponent implements OnDestroy {
 
   clearAll(): void {
     this.service.pecadosSelecionados = new Set();
+  }
+
+  setPecados() {
+    let selecionados: string[] = this.mandamentos.pecados
+      .filter((value) => value.selecionado)
+      .map((value) => value.texto);
+
+    this.service.pecadosSelecionados = new Set([
+      ...this.service.pecadosSelecionados,
+      ...selecionados,
+    ]);
   }
 }

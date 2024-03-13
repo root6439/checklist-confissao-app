@@ -1,7 +1,7 @@
 {
   "name": "checklist-confissao",
   "version": "0.0.2",
-  "author": "Ionic Framework",
+  "author": "Nicolas Soares Henrique",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -35,10 +35,6 @@
     "@capacitor/status-bar": "5.0.7",
     "@ionic/angular": "^7.5.0",
     "bootstrap": "^5.3.3",
-    "dom-to-image": "^2.6.0",
-    "html-to-image": "^1.11.11",
-    "html2canvas": "^1.4.1",
-    "html2pdf.js": "^0.10.1",
     "ionicons": "^7.2.1",
     "jspdf": "^2.5.1",
     "rxjs": "~7.8.0",
@@ -57,7 +53,6 @@
     "@angular/language-service": "^17.0.2",
     "@capacitor/cli": "5.7.1",
     "@ionic/angular-toolkit": "11.0.1",
-    "@types/dom-to-image": "^2.6.7",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -74,7 +69,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.2"
   },
-  "description": "An Ionic project",
+  "description": "Checklist confissão para facilitar exames de consciência",
   "browserslist": [
     "Chrome >=79",
     "ChromeAndroid >=79",

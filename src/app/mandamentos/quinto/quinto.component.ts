@@ -27,12 +27,12 @@ import { IonContent } from '@ionic/angular/standalone';
     IonContent,
   ],
 })
-export class QuintoComponent implements OnDestroy {
+export class QuintoComponent {
   mandamentos: Mandamento = QUINTO_MANDAMENTO;
 
   constructor(public service: MandamentosService) {}
 
-  ngOnDestroy(): void {
+  setPecados() {
     let selecionados: string[] = this.mandamentos.pecados
       .filter((value) => value.selecionado)
       .map((value) => value.texto);

@@ -3582,15 +3582,6 @@
         "hash": "sha512-8CGDvrBj1zgo2qE+oS3pOCyYNqCPryMWY2bGfwA0dcfopWGgxs+78df0Rs3rc9THP4JkOhLsAa+15VdpAqkcUA=="
       }
     },
-    "npm:@types/dom-to-image": {
-      "type": "npm",
-      "name": "npm:@types/dom-to-image",
-      "data": {
-        "version": "2.6.7",
-        "packageName": "@types/dom-to-image",
-        "hash": "sha512-me5VbCv+fcXozblWwG13krNBvuEOm6kA5xoa4RrjDJCNFOZSWR3/QLtOXimBHk1Fisq69Gx3JtOoXtg1N1tijg=="
-      }
-    },
     "npm:@types/eslint": {
       "type": "npm",
       "name": "npm:@types/eslint",
@@ -5589,15 +5580,6 @@
         "hash": "sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg=="
       }
     },
-    "npm:dom-to-image": {
-      "type": "npm",
-      "name": "npm:dom-to-image",
-      "data": {
-        "version": "2.6.0",
-        "packageName": "dom-to-image",
-        "hash": "sha512-Dt0QdaHmLpjURjU7Tnu3AgYSF2LuOmksSGsUcE6ItvJoCWTBEmiMXcqBdNSAm9+QbbwD7JMoVsuuKX6ZVQv1qA=="
-      }
-    },
     "npm:domelementtype": {
       "type": "npm",
       "name": "npm:domelementtype",
@@ -5929,15 +5911,6 @@
         "version": "1.2.1",
         "packageName": "es-to-primitive",
         "hash": "sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA=="
-      }
-    },
-    "npm:es6-promise": {
-      "type": "npm",
-      "name": "npm:es6-promise",
-      "data": {
-        "version": "4.2.8",
-        "packageName": "es6-promise",
-        "hash": "sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w=="
       }
     },
     "npm:esbuild": {
@@ -6930,15 +6903,6 @@
         "hash": "sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg=="
       }
     },
-    "npm:html-to-image": {
-      "type": "npm",
-      "name": "npm:html-to-image",
-      "data": {
-        "version": "1.11.11",
-        "packageName": "html-to-image",
-        "hash": "sha512-9gux8QhvjRO/erSnDPv28noDZcPZmYE7e1vFsBLKLlRlKDSqNJYebj6Qz1TGd5lsRV+X+xYyjCKjuZdABinWjA=="
-      }
-    },
     "npm:html2canvas": {
       "type": "npm",
       "name": "npm:html2canvas",
@@ -6946,15 +6910,6 @@
         "version": "1.4.1",
         "packageName": "html2canvas",
         "hash": "sha512-fPU6BHNpsyIhr8yyMpTLLxAbkaK8ArIBcmZIRiBLiDhjeqvXolaEmDGmELFuX9I4xDcaKKcJl+TKZLqruBbmWA=="
-      }
-    },
-    "npm:html2pdf.js": {
-      "type": "npm",
-      "name": "npm:html2pdf.js",
-      "data": {
-        "version": "0.10.1",
-        "packageName": "html2pdf.js",
-        "hash": "sha512-3onwwhOWsZfNjIZwV6YIJ6FVhXk+X9YxHSqzeS6hup+1dGi2DHI+zZYUJ+iFnvtaYcjlhyrILL1fvRCUOa8Fcg=="
       }
     },
     "npm:htmlparser2": {
@@ -20863,21 +20818,6 @@
     {
       "source": "npm:html2canvas",
       "target": "npm:text-segmentation",
-      "type": "static"
-    },
-    {
-      "source": "npm:html2pdf.js",
-      "target": "npm:es6-promise",
-      "type": "static"
-    },
-    {
-      "source": "npm:html2pdf.js",
-      "target": "npm:html2canvas",
-      "type": "static"
-    },
-    {
-      "source": "npm:html2pdf.js",
-      "target": "npm:jspdf",
       "type": "static"
     },
     {

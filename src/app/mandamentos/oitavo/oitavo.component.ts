@@ -23,21 +23,10 @@ import { IonContent } from '@ionic/angular/standalone';
     IonContent,
   ],
 })
-export class OitavoComponent implements OnDestroy {
+export class OitavoComponent {
   mandamentos: Mandamento = OITAVO_MANDAMENTO;
 
   constructor(public service: MandamentosService) {}
-
-  ngOnDestroy(): void {
-    let selecionados: string[] = this.mandamentos.pecados
-      .filter((value) => value.selecionado)
-      .map((value) => value.texto);
-
-    this.service.pecadosSelecionados = new Set([
-      ...this.service.pecadosSelecionados,
-      ...selecionados,
-    ]);
-  }
 
   setPecados() {
     let selecionados: string[] = this.mandamentos.pecados

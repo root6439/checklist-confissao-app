@@ -27,12 +27,12 @@ import { IonContent } from '@ionic/angular/standalone';
     IonContent,
   ],
 })
-export class SextoENonoComponent implements OnDestroy {
+export class SextoENonoComponent {
   mandamentos: Mandamento = SEXTO_E_NONO_MANDAMENTOS;
 
   constructor(public service: MandamentosService) {}
 
-  ngOnDestroy(): void {
+  setPecados() {
     let selecionados: string[] = this.mandamentos.pecados
       .filter((value) => value.selecionado)
       .map((value) => value.texto);
