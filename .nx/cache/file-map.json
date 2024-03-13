@@ -322,11 +322,11 @@
       },
       {
         "file": "package.json",
-        "hash": "8338813346463306398"
+        "hash": "16426108987230994853"
       },
       {
         "file": "src/app-config.ts",
-        "hash": "15428136991845193086"
+        "hash": "15538677469061899588"
       },
       {
         "file": "src/app.routes.ts",
@@ -346,7 +346,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "8205608899691954508"
+        "hash": "7984274895273837140"
       },
       {
         "file": "src/app/confissao/confissao.component.html",
@@ -382,7 +382,7 @@
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.html",
-        "hash": "3555503380822071000"
+        "hash": "10149068242618822915"
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.scss",
@@ -394,7 +394,7 @@
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.ts",
-        "hash": "8765493135342480114"
+        "hash": "5619075514505800481"
       },
       {
         "file": "src/app/mandamentos/mandamentos.routes.ts",
@@ -406,7 +406,7 @@
       },
       {
         "file": "src/app/mandamentos/mandamentos.service.ts",
-        "hash": "18028916585794054043"
+        "hash": "8849939015366679187"
       },
       {
         "file": "src/app/mandamentos/oitavo/oitavo.component.html",
@@ -614,7 +614,7 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "13543620450898954518"
+        "hash": "17918350751794599809"
       },
       {
         "file": "src/polyfills.ts",

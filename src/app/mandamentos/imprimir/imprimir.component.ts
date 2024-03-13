@@ -25,7 +25,11 @@ import { PrimeiroMandamento } from 'src/app/shared/data/PrimeiroMandamento';
 export class ImprimirComponent implements OnInit {
   constructor(public service: MandamentosService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.service.pecadosSelecionados = new Set([
+    //   ...PrimeiroMandamento.pecados.map((value) => value.texto),
+    // ]);
+  }
 
   print() {
     this.shareFile();
@@ -58,12 +62,8 @@ export class ImprimirComponent implements OnInit {
   }
 
   async createFile() {
-    let currentY = 100; // Posição Y inicial
+    let currentY = 110; // Posição Y inicial
     let currentLine = 0; // Número de linhas atual
-
-    this.service.pecadosSelecionados = new Set([
-      ...PrimeiroMandamento.pecados.map((value) => value.texto),
-    ]);
 
     const doc = new jsPDF();
 

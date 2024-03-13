@@ -38,4 +38,15 @@ export class OitavoComponent implements OnDestroy {
       ...selecionados,
     ]);
   }
+
+  setPecados() {
+    let selecionados: string[] = this.mandamentos.pecados
+      .filter((value) => value.selecionado)
+      .map((value) => value.texto);
+
+    this.service.pecadosSelecionados = new Set([
+      ...this.service.pecadosSelecionados,
+      ...selecionados,
+    ]);
+  }
 }
