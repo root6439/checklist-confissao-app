@@ -10,7 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "android": "ionic build && npx cap copy && npx cap sync android && npx cap run android",
+    "android": "ionic build && npx cap copy && npx cap sync android && npx cap run android --target Pixel_3a_API_34_extension_level_7_x86_64",
     "android-build": "ionic build && npx cap copy && npx cap sync android"
   },
   "private": true,

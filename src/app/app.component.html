@@ -1,7 +1,7 @@
 <ion-app>
   <ion-header>
     <mat-toolbar color="accent">
-      <ion-title style="flex: 1"> A Sagrada Confissão </ion-title>
+      <ion-title> A Sagrada Confissão </ion-title>
 
       <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
@@ -30,17 +30,9 @@
     ></mat-progress-bar>
   </ion-header>
 
-  <div class="container-lg">
+  <!-- <ion-content class="ion-padding"> COnteudo </ion-content> -->
+
+  <ion-content>
     <ion-router-outlet (activate)="onActivate()"></ion-router-outlet>
-
-    <!-- <footer class="mt-5">
-        <p>Sistema desenvolvido por Nicolas Soares Henrique</p>
-
-        <p>LinkedIn: https://www.linkedin.com/in/nicolas-soares-henrique/</p>
-
-        <p>Possui alguma sugestão ou feedback? Entre em contato:</p>
-
-        <p>(48) 98468-9248</p>
-      </footer> -->
-  </div>
+  </ion-content>
 </ion-app>
