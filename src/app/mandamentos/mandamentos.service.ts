@@ -1,26 +1,11 @@
-import { OITAVO_MANDAMENTO } from './../shared/data/OitavoMandamento';
-import { SETIMO_E_DECIMO_MANDAMENTOS } from './../shared/data/SetimoEDecimoMandamentos';
-import { SEXTO_E_NONO_MANDAMENTOS } from './../shared/data/SextoENonoMandamento';
-import { QUINTO_MANDAMENTO } from './../shared/data/QuintoMandamento';
-import { QUARTO_MANDAMENTO } from './../shared/data/QuartoMandamento';
-import { TERCEIRO_MANDAMENTO } from './../shared/data/TerceiroMandamento';
-import { SEGUNDO_MANDAMENTO } from './../shared/data/SegundoMandamento';
-import { PrimeiroMandamento } from './../shared/data/PrimeiroMandamento';
+import { Store } from '@ngrx/store';
 import { Mandamento, Pecado } from './../shared/models/Mandamento';
 import { Injectable } from '@angular/core';
+import { clear } from '../store/sins.actions';
 
 @Injectable()
 export class MandamentosService {
-  mandamentos: Mandamento[] = [
-    PrimeiroMandamento,
-    SEGUNDO_MANDAMENTO,
-    TERCEIRO_MANDAMENTO,
-    QUARTO_MANDAMENTO,
-    QUINTO_MANDAMENTO,
-    SEXTO_E_NONO_MANDAMENTOS,
-    SETIMO_E_DECIMO_MANDAMENTOS,
-    OITAVO_MANDAMENTO,
-  ];
+  constructor(private store: Store) {}
 
   pecadosSelecionados: Set<string> = new Set();
 
@@ -31,20 +16,14 @@ export class MandamentosService {
   }
 
   clearAll(): void {
-    this.mandamentos.forEach((value: Mandamento) => {
-      value.pecados.forEach((pecado: Pecado) => {
-        pecado.selecionado = false;
-      });
-    });
+    this.store.dispatch(clear());
   }
 
   atLeastOneSelected(mandament: Mandamento): boolean {
     return !mandament.pecados.some((value: Pecado) => value.selecionado);
   }
 
-  somePecadoSelected(): boolean {
-    return !this.mandamentos.some((obj: Mandamento) =>
-      obj.pecados.some((value: Pecado) => value.selecionado)
-    );
+  someSinSelected(): boolean {
+    return false;
   }
 }

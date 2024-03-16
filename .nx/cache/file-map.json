@@ -21,6 +21,7 @@
     "@capacitor/share": "^5.0.7",
     "@capacitor/status-bar": "5.0.7",
     "@ionic/angular": "^7.5.0",
+    "@ngrx/store": "^17.1.1",
     "bootstrap": "^5.3.3",
     "ionicons": "^7.2.1",
     "jspdf": "^2.5.1",
@@ -38,13 +39,10 @@
     "@angular/language-service": "^17.0.2",
     "@capacitor/cli": "5.7.1",
     "@ionic/angular-toolkit": "11.0.1",
+    "@ngrx/eslint-plugin": "^17.1.1",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^7.26.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jsdoc": "30.7.6",
-    "eslint-plugin-prefer-arrow": "1.2.2",
     "jasmine-core": "~5.1.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.4.0",
@@ -65,7 +63,7 @@
       },
       {
         "file": ".eslintrc.json",
-        "hash": "3555539555184033037"
+        "hash": "1738259960899168920"
       },
       {
         "file": ".gitignore",
@@ -89,7 +87,7 @@
       },
       {
         "file": "android/app/build.gradle",
-        "hash": "9840671000650972177"
+        "hash": "16834500870448797584"
       },
       {
         "file": "android/app/capacitor.build.gradle",
@@ -313,15 +311,15 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "4147239274434293238"
+        "hash": "7199881894940881686"
       },
       {
         "file": "package.json",
-        "hash": "9738642794493637961"
+        "hash": "18098217752594028553"
       },
       {
         "file": "src/app-config.ts",
-        "hash": "15538677469061899588"
+        "hash": "1607832539652998674"
       },
       {
         "file": "src/app.routes.ts",
@@ -329,7 +327,7 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "1512582295122648582"
+        "hash": "292414974092686324"
       },
       {
         "file": "src/app/app.component.scss",
@@ -341,7 +339,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "7984274895273837140"
+        "hash": "2557340433414947628"
       },
       {
         "file": "src/app/confissao/confissao.component.html",
@@ -377,7 +375,7 @@
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.html",
-        "hash": "10149068242618822915"
+        "hash": "13931250452439622194"
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.scss",
@@ -389,7 +387,7 @@
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.ts",
-        "hash": "3366673687103519755"
+        "hash": "11356048997487287732"
       },
       {
         "file": "src/app/mandamentos/mandamentos.routes.ts",
@@ -401,7 +399,7 @@
       },
       {
         "file": "src/app/mandamentos/mandamentos.service.ts",
-        "hash": "8849939015366679187"
+        "hash": "2336196495691652845"
       },
       {
         "file": "src/app/mandamentos/oitavo/oitavo.component.html",
@@ -421,7 +419,7 @@
       },
       {
         "file": "src/app/mandamentos/primeiro/primeiro.component.html",
-        "hash": "13402258535004712428"
+        "hash": "12400400314275453413"
       },
       {
         "file": "src/app/mandamentos/primeiro/primeiro.component.scss",
@@ -433,11 +431,11 @@
       },
       {
         "file": "src/app/mandamentos/primeiro/primeiro.component.ts",
-        "hash": "14443020744896656477"
+        "hash": "5131206846332903376"
       },
       {
         "file": "src/app/mandamentos/quarto/quarto.component.html",
-        "hash": "2058171660192390401"
+        "hash": "12063817624031927700"
       },
       {
         "file": "src/app/mandamentos/quarto/quarto.component.scss",
@@ -453,7 +451,7 @@
       },
       {
         "file": "src/app/mandamentos/quinto/quinto.component.html",
-        "hash": "5618524634602045936"
+        "hash": "15395094452396679275"
       },
       {
         "file": "src/app/mandamentos/quinto/quinto.component.scss",
@@ -469,7 +467,7 @@
       },
       {
         "file": "src/app/mandamentos/segundo/segundo.component.html",
-        "hash": "5608615992705750773"
+        "hash": "7641021568932026095"
       },
       {
         "file": "src/app/mandamentos/segundo/segundo.component.scss",
@@ -485,7 +483,7 @@
       },
       {
         "file": "src/app/mandamentos/setimo-e-decimo/setimo-e-decimo.component.html",
-        "hash": "763341326428367281"
+        "hash": "8782777123944017515"
       },
       {
         "file": "src/app/mandamentos/setimo-e-decimo/setimo-e-decimo.component.scss",
@@ -501,7 +499,7 @@
       },
       {
         "file": "src/app/mandamentos/sexto-enono/sexto-enono.component.html",
-        "hash": "12951905852827598897"
+        "hash": "9211750358055824695"
       },
       {
         "file": "src/app/mandamentos/sexto-enono/sexto-enono.component.scss",
@@ -517,7 +515,7 @@
       },
       {
         "file": "src/app/mandamentos/terceiro/terceiro.component.html",
-        "hash": "17531052602630947102"
+        "hash": "1125308579168920315"
       },
       {
         "file": "src/app/mandamentos/terceiro/terceiro.component.scss",
@@ -553,7 +551,7 @@
       },
       {
         "file": "src/app/shared/data/PrimeiroMandamento.ts",
-        "hash": "10023683194176399744"
+        "hash": "10927383481422599202"
       },
       {
         "file": "src/app/shared/data/QuartoMandamento.ts",
@@ -584,6 +582,22 @@
         "hash": "1636380996989203344"
       },
       {
+        "file": "src/app/store/app-state.ts",
+        "hash": "12117328683802541856"
+      },
+      {
+        "file": "src/app/store/sins.actions.ts",
+        "hash": "17943228469543695801"
+      },
+      {
+        "file": "src/app/store/sins.reducers.ts",
+        "hash": "5728141744617244144"
+      },
+      {
+        "file": "src/app/store/sins.selectors.ts",
+        "hash": "10008360119447591785"
+      },
+      {
         "file": "src/assets/icon/favicon.png",
         "hash": "17482944836898362639"
       },
@@ -605,7 +619,7 @@
       },
       {
         "file": "src/index.html",
-        "hash": "1227859869009279660"
+        "hash": "10279377279935673219"
       },
       {
         "file": "src/main.ts",
@@ -621,11 +635,11 @@
       },
       {
         "file": "src/theme/variables.css",
-        "hash": "14326193929875254985"
+        "hash": "13833668533108236253"
       },
       {
         "file": "src/theme/variables.scss",
-        "hash": "2326826827206661690"
+        "hash": "13540721139779098790"
       },
       {
         "file": "src/zone-flags.ts",

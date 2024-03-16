@@ -5,6 +5,8 @@ import { RouteReuseStrategy, provideRouter } from '@angular/router';
 import { IonicRouteStrategy, IonicModule } from '@ionic/angular';
 import { provideIonicAngular } from '@ionic/angular/standalone';
 import { MandamentosService } from './app/mandamentos/mandamentos.service';
+import { provideStore } from '@ngrx/store';
+import { sinReducer } from './app/store/sins.reducers';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,5 +16,6 @@ export const appConfig: ApplicationConfig = {
     provideIonicAngular(),
     importProvidersFrom(IonicModule.forRoot({})),
     MandamentosService,
+    provideStore({ sins: sinReducer }),
   ],
 };

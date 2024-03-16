@@ -8,7 +8,7 @@
     </h3>
 
     <p *ngFor="let pecado of mandamentos.pecados">
-      <mat-checkbox color="primary" [(ngModel)]="pecado.selecionado">
+      <mat-checkbox color="primary" (change)="addSin(pecado.texto, $event)">
         {{ pecado.texto }}
       </mat-checkbox>
     </p>
@@ -22,7 +22,7 @@
       Voltar
     </button>
 
-    <button mat-flat-button color="primary" routerLink="/checklist/imprimir" (click)="setPecados()">
+    <button mat-flat-button color="primary" routerLink="/checklist/imprimir">
       Finalizar
     </button>
   </div>

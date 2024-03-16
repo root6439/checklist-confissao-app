@@ -8,7 +8,7 @@
       <mat-checkbox
         color="primary"
         color="primary"
-        [(ngModel)]="pecado.selecionado"
+        (change)="addSin(pecado.texto)"
       >
         {{ pecado.texto }}
       </mat-checkbox>
@@ -29,7 +29,7 @@
     <button
       mat-button
       [matMenuTriggerFor]="menu"
-      [disabled]="service.somePecadoSelected()"
+      [disabled]="service.someSinSelected()"
     >
       Limpar
     </button>

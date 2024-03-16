@@ -130,24 +130,19 @@ export const PrimeiroMandamento: Mandamento = {
         'Presunção (esperar pela salvação sem a ajuda de Deus ou pressupor o perdão de Deus sem conversão ou esperar obter a glória do paraíso sem mérito).',
     },
     {
-      texto:
-        'Não tenho feito atos de caridade.',
+      texto: 'Não tenho feito atos de caridade.',
     },
     {
-      texto:
-        'Sou egoísta.',
+      texto: 'Sou egoísta.',
     },
     {
-      texto:
-        'Me orgulho do próprio pecado.',
+      texto: 'Me orgulho do próprio pecado.',
     },
     {
-      texto:
-        'Violo a lei de Deus ou omito boas obras por respeito humano.',
+      texto: 'Violo a lei de Deus ou omito boas obras por respeito humano.',
     },
     {
-      texto:
-        'Não sou paciente diante das adversidades e provações',
+      texto: 'Não sou paciente diante das adversidades e provações',
     },
   ],
 };

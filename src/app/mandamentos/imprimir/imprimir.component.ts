@@ -7,7 +7,10 @@ import { IonContent } from '@ionic/angular/standalone';
 import { Share } from '@capacitor/share';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { jsPDF } from 'jspdf';
-import { PrimeiroMandamento } from 'src/app/shared/data/PrimeiroMandamento';
+import { Store } from '@ngrx/store';
+import { AppState, ISin } from 'src/app/store/app-state';
+import { addSin } from 'src/app/store/sins.actions';
+import { selectSins } from 'src/app/store/sins.selectors';
 
 @Component({
   selector: 'app-imprimir',
@@ -23,12 +26,17 @@ import { PrimeiroMandamento } from 'src/app/shared/data/PrimeiroMandamento';
   ],
 })
 export class ImprimirComponent implements OnInit {
-  constructor(public service: MandamentosService) {}
+  constructor(
+    public service: MandamentosService,
+    private store: Store<AppState>
+  ) {}
+
+  selectedSins: ISin[] = [];
 
   ngOnInit(): void {
-    // this.service.pecadosSelecionados = new Set([
-    //   ...PrimeiroMandamento.pecados.map((value) => value.texto),
-    // ]);
+    this.store
+      .select(selectSins)
+      .subscribe((sins) => (this.selectedSins = sins));
   }
 
   print() {
@@ -81,6 +89,7 @@ Minha última Confissão foi há... (dizer a data da última confissão, ao meno
     );
 
     this.service.pecadosSelecionados.forEach((value) => {
+      value = `• ${value}`;
       if (currentLine < maxLinesPerPage) {
         this.addText(doc, value, currentY); // Adiciona o texto à página
         currentY += value.length >= 124 ? lineHeight + lineHeight : lineHeight; // Incrementa a posição Y para a próxima linha
