@@ -7,14 +7,23 @@ import { AppState } from '@capacitor/app';
 import { addSin, removeSin } from 'src/app/store/sins.actions';
 import { Pecado } from '../models/Mandamento';
 import { selectSins } from 'src/app/store/sins.selectors';
-import { ISin } from 'src/app/store/app-state';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
-  selector: 'app-sin-list',
+  selector: 'sin-list',
   templateUrl: './sin-list.component.html',
   styleUrls: ['./sin-list.component.scss'],
   standalone: true,
-  imports: [IonContent, RouterModule, MatCheckboxModule],
+  imports: [
+    IonContent,
+    RouterModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+  ],
 })
 export class SinListComponent implements OnInit {
   constructor(private store: Store<AppState>) {}
@@ -42,10 +51,6 @@ export class SinListComponent implements OnInit {
       .subscribe(
         (resp) => (this.selectedSins = resp.map((value) => value.text))
       );
-  }
-
-  sinAlreadyChecked(sin: string) {
-    return this.selectedSins.includes(sin);
   }
 
   toggleSin(text: string, add: boolean) {

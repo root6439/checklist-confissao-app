@@ -1,4 +1,4 @@
-<ion-content class="ion-padding">
+<!-- <ion-content class="ion-padding">
   <div class="pb-5">
     <h1>Oitavo mandamento</h1>
 
@@ -15,15 +15,21 @@
   </div>
 
   <div class="options">
-    <button
-      mat-flat-button
-      [routerLink]="['/checklist/setimo-e-decimo-mandamentos']"
-    >
-      Voltar
-    </button>
+    <button mat-flat-button [routerLink]="['']">Voltar</button>
 
-    <button mat-flat-button color="primary" routerLink="/checklist/imprimir">
+    <button mat-flat-button color="primary" routerLink="">
       Finalizar
     </button>
   </div>
+</ion-content> -->
+
+<ion-content>
+  <sin-list
+    title="Oitavo mandamento"
+    subtitle="Não levantar falso testemunho nem de qualquer outro modo faltar à verdade
+  ou difamar o próximo."
+    previousRoute="/checklist/setimo-e-decimo-mandamentos"
+    nextRoute="/checklist/imprimir"
+    [sins]="commandments.pecados"
+  />
 </ion-content>

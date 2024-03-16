@@ -1,51 +1,9 @@
 <ion-content class="ion-padding">
-  <div class="pb-5">
-    <h1>Segundo mandamento</h1>
-
-    <h3>"Não tomarás o nome do Senhor teu Deus em vão."</h3>
-
-    <p *ngFor="let pecado of mandamentos.pecados">
-      <mat-checkbox color="primary" [(ngModel)]="pecado.selecionado">
-        {{ pecado.texto }}
-      </mat-checkbox>
-    </p>
-  </div>
-
-  <div class="options">
-    <button
-      mat-stroked-button
-      class="mr-2"
-      [routerLink]="['/checklist/primeiro-mandamento']"
-    >
-      Voltar
-    </button>
-
-    <button
-      mat-flat-button
-      color="primary"
-      [routerLink]="['/checklist/terceiro-mandamento']"
-      (click)="setPecados()"
-    >
-      Avançar
-      <mat-icon> keyboard_arrow_right </mat-icon>
-    </button>
-
-    <button
-      mat-button
-      [matMenuTriggerFor]="menu"
-      [disabled]="service.someSinSelected()"
-    >
-      Limpar
-    </button>
-    <mat-menu #menu="matMenu">
-      <button
-        mat-menu-item
-        (click)="service.clearMandament(mandamentos)"
-        [disabled]="service.atLeastOneSelected(mandamentos)"
-      >
-        Limpar este mandamento
-      </button>
-      <button mat-menu-item (click)="service.clearAll()">Limpar tudo</button>
-    </mat-menu>
-  </div>
+  <sin-list
+    title="Segundo mandamento"
+    subtitle="Não tomarás o nome do Senhor teu Deus em vão."
+    previousRoute="/checklist/primeiro-mandamento"
+    nextRoute="/checklist/terceiro-mandamento"
+    [sins]="commandments.pecados"
+  />
 </ion-content>

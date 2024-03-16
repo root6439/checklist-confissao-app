@@ -10,6 +10,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { IonContent } from '@ionic/angular/standalone';
+import { SinListComponent } from 'src/app/shared/sin-list/sin-list.component';
 
 @Component({
   selector: 'app-segundo',
@@ -25,31 +26,9 @@ import { IonContent } from '@ionic/angular/standalone';
     MatMenuModule,
     MatButtonModule,
     IonContent,
+    SinListComponent,
   ],
 })
 export class SegundoComponent {
-  mandamentos: Mandamento = SEGUNDO_MANDAMENTO;
-
-  constructor(public service: MandamentosService) {}
-
-  clearMandament(): void {
-    this.mandamentos.pecados.forEach((value: Pecado) => {
-      value.selecionado = false;
-    });
-  }
-
-  clearAll(): void {
-    this.service.pecadosSelecionados = new Set();
-  }
-
-  setPecados() {
-    let selecionados: string[] = this.mandamentos.pecados
-      .filter((value) => value.selecionado)
-      .map((value) => value.texto);
-
-    this.service.pecadosSelecionados = new Set([
-      ...this.service.pecadosSelecionados,
-      ...selecionados,
-    ]);
-  }
+  commandments: Mandamento = SEGUNDO_MANDAMENTO;
 }
