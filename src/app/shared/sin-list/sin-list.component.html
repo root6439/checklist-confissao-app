@@ -1,0 +1,29 @@
+<ion-content class="ion-padding">
+  <div class="pb-5">
+    <h1>{{ title }}</h1>
+
+    <h3>
+      {{ subtitle }}
+    </h3>
+
+    @for (sin of sins; track sin) {
+    <p>
+      <mat-checkbox
+        color="primary"
+        (change)="toggleSin(sin.texto, $event.checked)"
+        [checked]="sinAlreadyChecked(sin.texto)"
+      >
+        {{ sin.texto }}
+      </mat-checkbox>
+    </p>
+    }
+  </div>
+
+  <div class="options">
+    <button mat-flat-button [routerLink]="[previousRoute]">Voltar</button>
+
+    <button mat-flat-button color="primary" [routerLink]="[nextRoute]">
+      Finalizar
+    </button>
+  </div>
+</ion-content>
