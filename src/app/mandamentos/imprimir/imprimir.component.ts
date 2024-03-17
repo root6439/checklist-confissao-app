@@ -1,5 +1,4 @@
 import { MatIconModule } from '@angular/material/icon';
-import { MandamentosService } from './../mandamentos.service';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -9,8 +8,9 @@ import { Filesystem, Directory } from '@capacitor/filesystem';
 import { jsPDF } from 'jspdf';
 import { Store } from '@ngrx/store';
 import { AppState, ISin } from 'src/app/store/app-state';
-import { addSin } from 'src/app/store/sins.actions';
 import { selectSins } from 'src/app/store/sins.selectors';
+import { addSin } from 'src/app/store/sins.actions';
+import { PrimeiroMandamento } from 'src/app/shared/data/PrimeiroMandamento';
 
 @Component({
   selector: 'app-imprimir',
@@ -26,14 +26,15 @@ import { selectSins } from 'src/app/store/sins.selectors';
   ],
 })
 export class ImprimirComponent implements OnInit {
-  constructor(
-    public service: MandamentosService,
-    private store: Store<AppState>
-  ) {}
+  constructor(private store: Store<AppState>) {}
 
   selectedSins: ISin[] = [];
 
   ngOnInit(): void {
+    PrimeiroMandamento.pecados.forEach((value) => {
+      this.store.dispatch(addSin({ text: value.texto }));
+    });
+
     this.store
       .select(selectSins)
       .subscribe((sins) => (this.selectedSins = sins));
@@ -70,7 +71,7 @@ export class ImprimirComponent implements OnInit {
   }
 
   async createFile() {
-    let currentY = 110; // Posição Y inicial
+    let currentY = 10; // Posição Y inicial
     let currentLine = 0; // Número de linhas atual
 
     const doc = new jsPDF();
@@ -85,21 +86,21 @@ export class ImprimirComponent implements OnInit {
 Penitente: Abençoai-me, Padre, por que pequei.
 Sacerdote: Que o Senhor esteja em teus lábeios e em teu coração para que possas confessar bem todos os teus pecados. Em nome do Pai, do Filho e do Espírito Santo.
 Minha última Confissão foi há... (dizer a data da última confissão, ao menos aproximadamente.) Em seguida, o penitente se acusa de seus pecados, dizendo o tipo de pecado e as circunstâncias que podem mudar a espécie e se for grave, o número de vezes que o cometeu.`,
-      40
+      10
     );
 
-    this.service.pecadosSelecionados.forEach((value) => {
-      value = `• ${value}`;
+    doc.addPage();
+
+    const selectedSins = this.selectedSins.map((value) => `• ${value.text}`);
+
+    selectedSins.forEach((value) => {
       if (currentLine < maxLinesPerPage) {
+        if (currentY + lineHeight > pageHeight) {
+          doc.addPage(); // Adiciona uma nova página se o texto não couber na página atual
+          currentY = 10; // Reseta a posição Y para o topo da nova página
+          currentLine = 0; // Reseta o número de linhas para a nova página
+        }
         this.addText(doc, value, currentY); // Adiciona o texto à página
-        currentY += value.length >= 124 ? lineHeight + lineHeight : lineHeight; // Incrementa a posição Y para a próxima linha
-        currentLine++;
-      } else {
-        // Adiciona uma nova página
-        doc.addPage();
-        currentY = 10; // Reseta a posição Y
-        currentLine = 0; // Reseta o número de linhas
-        this.addText(doc, value, currentY); // Adiciona o texto à nova página
         currentY += lineHeight; // Incrementa a posição Y para a próxima linha
         currentLine++;
       }
@@ -109,6 +110,7 @@ Minha última Confissão foi há... (dizer a data da última confissão, ao meno
     });
 
     doc.addPage();
+
     this.addText(
       doc,
       `
@@ -123,11 +125,15 @@ Meu bom Jesus, quão bondoso sois! Oh! Quem nunca vos ofendera! Apesar de ter si
         `,
       10
     );
+
     return doc.output('datauristring');
   }
 
   addText(doc: jsPDF, text: string, positionY: number) {
-    const textFormatted = doc.splitTextToSize(text, 180);
+    const textFormatted = doc.splitTextToSize(
+      text,
+      doc.internal.pageSize.width - 20
+    );
     return doc.text(textFormatted, 10, positionY);
   }
 }

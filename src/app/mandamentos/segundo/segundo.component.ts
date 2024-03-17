@@ -1,7 +1,5 @@
-import { Mandamento, Pecado } from './../../shared/models/Mandamento';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SEGUNDO_MANDAMENTO } from 'src/app/shared/data/SegundoMandamento';
-import { MandamentosService } from '../mandamentos.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -30,5 +28,5 @@ import { SinListComponent } from 'src/app/shared/sin-list/sin-list.component';
   ],
 })
 export class SegundoComponent {
-  commandments: Mandamento = SEGUNDO_MANDAMENTO;
+  commandments = SEGUNDO_MANDAMENTO;
 }

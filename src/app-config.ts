@@ -4,7 +4,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { RouteReuseStrategy, provideRouter } from '@angular/router';
 import { IonicRouteStrategy, IonicModule } from '@ionic/angular';
 import { provideIonicAngular } from '@ionic/angular/standalone';
-import { MandamentosService } from './app/mandamentos/mandamentos.service';
 import { provideStore } from '@ngrx/store';
 import { sinReducer } from './app/store/sins.reducers';
 
@@ -15,7 +14,6 @@ export const appConfig: ApplicationConfig = {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     importProvidersFrom(IonicModule.forRoot({})),
-    MandamentosService,
     provideStore({ sins: sinReducer }),
   ],
 };
