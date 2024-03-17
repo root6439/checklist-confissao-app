@@ -9,8 +9,6 @@ import { jsPDF } from 'jspdf';
 import { Store } from '@ngrx/store';
 import { AppState, ISin } from 'src/app/store/app-state';
 import { selectSins } from 'src/app/store/sins.selectors';
-import { addSin } from 'src/app/store/sins.actions';
-import { PrimeiroMandamento } from 'src/app/shared/data/PrimeiroMandamento';
 
 @Component({
   selector: 'app-imprimir',
@@ -31,10 +29,6 @@ export class ImprimirComponent implements OnInit {
   selectedSins: ISin[] = [];
 
   ngOnInit(): void {
-    PrimeiroMandamento.pecados.forEach((value) => {
-      this.store.dispatch(addSin({ text: value.texto }));
-    });
-
     this.store
       .select(selectSins)
       .subscribe((sins) => (this.selectedSins = sins));

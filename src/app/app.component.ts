@@ -44,13 +44,17 @@ export class AppComponent implements OnInit {
   constructor(private router: Router, private dialog: MatDialog) {}
 
   ngOnInit(): void {
-    let aux = localStorage.getItem('userAlreadySawDialog');
-    
-    if (aux) {
-      return;
-    }
+    let userDontSawDialog = Boolean(
+      !localStorage.getItem('userAlreadySawDialog')
+    );
 
-    localStorage.setItem('userAlreadySawDialog', 'true');
+    if (userDontSawDialog) {
+      this.showDialog();
+      localStorage.setItem('userAlreadySawDialog', 'true');
+    }
+  }
+
+  showDialog() {
     this.dialog.open(DialogNoDataStorage, {
       width: this.isMobile ? '80%' : '40%',
     });
