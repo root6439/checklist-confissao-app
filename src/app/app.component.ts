@@ -4,11 +4,12 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Router, RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { CommonModule, Location } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { IonRouterOutlet, NavController } from '@ionic/angular/standalone';
 import { IonicModule } from '@ionic/angular';
+import { DomSanitizer } from '@angular/platform-browser';
 
 interface IProgressData {
   [value: string]: number;
@@ -35,8 +36,17 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private dialog: MatDialog,
-    private navCtrl: NavController
-  ) {}
+    private navCtrl: NavController,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer
+  ) {
+    this.matIconRegistry.addSvgIcon(
+      'cross',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        './assets/icon/cross.svg'
+      )
+    );
+  }
 
   isMobile: boolean = window.screen.width <= 720;
 
@@ -47,8 +57,8 @@ export class AppComponent implements OnInit {
     'quarto-mandamento': 50,
     'quinto-mandamento': 60.25,
     'sexto-e-nono-mandamentos': 70.5,
-    'setimo-e-decimo-mandamentos': 80.75,
-    'oitavo-mandamento': 100,
+    'setimo-e-decimo-mandamentos': 78.75,
+    'oitavo-mandamento': 95.5,
   };
 
   ngOnInit(): void {

@@ -8,6 +8,7 @@ import { provideStore } from '@ngrx/store';
 import { sinReducer } from './app/store/sins.reducers';
 import { historyReducer } from './app/store/history/history.reducers';
 import { metaReducers } from './app/store/local-store.reducer';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,5 +21,6 @@ export const appConfig: ApplicationConfig = {
       { sins: sinReducer, history: historyReducer },
       { metaReducers }
     ),
+    provideHttpClient(),
   ],
 };
