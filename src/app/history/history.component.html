@@ -1,7 +1,7 @@
 <ion-content class="ion-padding">
-  <h1>history working</h1>
+  <h1>Histórico de confissões</h1>
 
-  <mat-accordion multi>
+  <mat-accordion multi class="mt-3">
     @for (data of historyData; track data.id) {
     <mat-expansion-panel (click)="getData(data.id)">
       <mat-expansion-panel-header>
@@ -16,6 +16,10 @@
         }
       </ul>
     </mat-expansion-panel>
+    } @empty {
+      <p>
+        Você ainda não fez nenhum exame de consciência
+      </p>
     }
   </mat-accordion>
 </ion-content>

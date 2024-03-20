@@ -2,24 +2,6 @@
   <ion-header>
     <mat-toolbar color="accent">
       <ion-title> A Sagrada Confissão </ion-title>
-
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="confissao">
-          <span>A Confissão</span>
-        </button>
-        <button mat-menu-item routerLink="perguntas">
-          <span>Perguntas</span>
-        </button>
-        <button mat-menu-item routerLink="dicas">
-          <span>Dicas</span>
-        </button>
-        <button mat-menu-item routerLink="checklist/primeiro-mandamento">
-          <span>Checklist</span>
-        </button>
-      </mat-menu>
     </mat-toolbar>
 
     <mat-progress-bar
@@ -34,5 +16,32 @@
 
   <ion-content>
     <ion-router-outlet (activate)="onActivate()"></ion-router-outlet>
+
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button
+          tab="checklist/primeiro-mandamento"
+          routerLink="checklist/primeiro-mandamento"
+        >
+          <mat-icon>check</mat-icon>
+          Checklist
+        </ion-tab-button>
+        <ion-tab-button tab="dicas" routerLink="dicas">
+          <mat-icon>lightbulb</mat-icon>
+          Dicas
+        </ion-tab-button>
+        <ion-tab-button tab="confissao" routerLink="confissao">
+          Confissão
+        </ion-tab-button>
+        <ion-tab-button tab="perguntas" routerLink="perguntas">
+          <mat-icon>help_outline</mat-icon>
+          Perguntas
+        </ion-tab-button>
+        <ion-tab-button tab="history" routerLink="history">
+          <mat-icon>history</mat-icon>
+          Histórico
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
   </ion-content>
 </ion-app>
