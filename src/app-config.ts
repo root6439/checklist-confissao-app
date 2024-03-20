@@ -7,6 +7,7 @@ import { provideIonicAngular } from '@ionic/angular/standalone';
 import { provideStore } from '@ngrx/store';
 import { sinReducer } from './app/store/sins.reducers';
 import { historyReducer } from './app/store/history/history.reducers';
+import { metaReducers } from './app/store/local-store.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,6 +16,9 @@ export const appConfig: ApplicationConfig = {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     importProvidersFrom(IonicModule.forRoot({})),
-    provideStore({ sins: sinReducer, history: historyReducer }),
+    provideStore(
+      { sins: sinReducer, history: historyReducer },
+      { metaReducers }
+    ),
   ],
 };

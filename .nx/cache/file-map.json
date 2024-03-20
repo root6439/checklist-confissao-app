@@ -88,7 +88,7 @@
       },
       {
         "file": "android/app/build.gradle",
-        "hash": "11456583240765918752"
+        "hash": "3307990090258428280"
       },
       {
         "file": "android/app/capacitor.build.gradle",
@@ -328,7 +328,7 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "292414974092686324"
+        "hash": "9009102657420804105"
       },
       {
         "file": "src/app/app.component.scss",
@@ -340,7 +340,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "3450857420362696426"
+        "hash": "11892844052698031398"
       },
       {
         "file": "src/app/confissao/confissao.component.html",
@@ -376,7 +376,7 @@
       },
       {
         "file": "src/app/history/history.component.html",
-        "hash": "3884990101733391955"
+        "hash": "7412560953600279606"
       },
       {
         "file": "src/app/history/history.component.scss",
@@ -408,7 +408,7 @@
       },
       {
         "file": "src/app/mandamentos/mandamentos.routes.ts",
-        "hash": "14545287269100515703"
+        "hash": "2782101881717100099"
       },
       {
         "file": "src/app/mandamentos/oitavo/oitavo.component.html",
@@ -604,7 +604,7 @@
       },
       {
         "file": "src/app/shared/sin-list/sin-list.component.html",
-        "hash": "8305033245215656052"
+        "hash": "12904389332957045273"
       },
       {
         "file": "src/app/shared/sin-list/sin-list.component.scss",
@@ -616,7 +616,7 @@
       },
       {
         "file": "src/app/shared/sin-list/sin-list.component.ts",
-        "hash": "16941740988565469956"
+        "hash": "15064195292624211819"
       },
       {
         "file": "src/app/store/app-state.ts",
@@ -651,6 +651,10 @@
         "hash": "4059307786091601431"
       },
       {
+        "file": "src/assets/icon/cross.svg",
+        "hash": "6234155256216611712"
+      },
+      {
         "file": "src/assets/icon/favicon.png",
         "hash": "17482944836898362639"
       },
@@ -668,7 +672,7 @@
       },
       {
         "file": "src/global.scss",
-        "hash": "5494607390550100589"
+        "hash": "6772850811081230597"
       },
       {
         "file": "src/index.html",
