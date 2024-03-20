@@ -25,6 +25,7 @@
     "bootstrap": "^5.3.3",
     "ionicons": "^7.2.1",
     "jspdf": "^2.5.1",
+    "ngrx-store-localstorage": "^17.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2",
@@ -87,7 +88,7 @@
       },
       {
         "file": "android/app/build.gradle",
-        "hash": "13092197527193725509"
+        "hash": "11456583240765918752"
       },
       {
         "file": "android/app/capacitor.build.gradle",
@@ -311,19 +312,19 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "7199881894940881686"
+        "hash": "15037623473745752697"
       },
       {
         "file": "package.json",
-        "hash": "18098217752594028553"
+        "hash": "1899133325057363980"
       },
       {
         "file": "src/app-config.ts",
-        "hash": "4435645843058553164"
+        "hash": "6192072626141903041"
       },
       {
         "file": "src/app.routes.ts",
-        "hash": "11116752289265329275"
+        "hash": "5886193117866373898"
       },
       {
         "file": "src/app/app.component.html",
@@ -339,7 +340,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "2557340433414947628"
+        "hash": "3450857420362696426"
       },
       {
         "file": "src/app/confissao/confissao.component.html",
@@ -374,6 +375,22 @@
         "hash": "3597215382213311583"
       },
       {
+        "file": "src/app/history/history.component.html",
+        "hash": "3884990101733391955"
+      },
+      {
+        "file": "src/app/history/history.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/history/history.component.spec.ts",
+        "hash": "14137940648066501622"
+      },
+      {
+        "file": "src/app/history/history.component.ts",
+        "hash": "4654884898176673364"
+      },
+      {
         "file": "src/app/mandamentos/imprimir/imprimir.component.html",
         "hash": "10003559272764738676"
       },
@@ -387,7 +404,7 @@
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.ts",
-        "hash": "14325811037537411565"
+        "hash": "179233596137170203"
       },
       {
         "file": "src/app/mandamentos/mandamentos.routes.ts",
@@ -471,7 +488,7 @@
       },
       {
         "file": "src/app/mandamentos/segundo/segundo.component.ts",
-        "hash": "11382308514219210800"
+        "hash": "5460134281596593068"
       },
       {
         "file": "src/app/mandamentos/setimo-e-decimo/setimo-e-decimo.component.html",
@@ -570,8 +587,20 @@
         "hash": "9574988866272205010"
       },
       {
+        "file": "src/app/shared/models/History.ts",
+        "hash": "12497492987608677645"
+      },
+      {
         "file": "src/app/shared/models/Mandamento.ts",
         "hash": "1636380996989203344"
+      },
+      {
+        "file": "src/app/shared/pipes/date.pipe.spec.ts",
+        "hash": "18256045128242073577"
+      },
+      {
+        "file": "src/app/shared/pipes/date.pipe.ts",
+        "hash": "10785439015569662123"
       },
       {
         "file": "src/app/shared/sin-list/sin-list.component.html",
@@ -594,12 +623,28 @@
         "hash": "12117328683802541856"
       },
       {
+        "file": "src/app/store/history/history.actions.ts",
+        "hash": "10039531190903281418"
+      },
+      {
+        "file": "src/app/store/history/history.reducers.ts",
+        "hash": "5491389381009453473"
+      },
+      {
+        "file": "src/app/store/history/history.selectors.ts",
+        "hash": "14124928589028021377"
+      },
+      {
+        "file": "src/app/store/history/history.state.ts",
+        "hash": "4526000041273904852"
+      },
+      {
         "file": "src/app/store/sins.actions.ts",
         "hash": "17943228469543695801"
       },
       {
         "file": "src/app/store/sins.reducers.ts",
-        "hash": "15061217664845861776"
+        "hash": "12820267968907163130"
       },
       {
         "file": "src/app/store/sins.selectors.ts",

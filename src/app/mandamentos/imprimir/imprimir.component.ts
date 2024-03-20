@@ -9,6 +9,7 @@ import { jsPDF } from 'jspdf';
 import { Store } from '@ngrx/store';
 import { AppState, ISin } from 'src/app/store/app-state';
 import { selectSins } from 'src/app/store/sins.selectors';
+import { addHistory } from 'src/app/store/history/history.actions';
 
 @Component({
   selector: 'app-imprimir',
@@ -32,6 +33,10 @@ export class ImprimirComponent implements OnInit {
     this.store
       .select(selectSins)
       .subscribe((sins) => (this.selectedSins = sins));
+
+    this.store.dispatch(
+      addHistory({ sins: this.selectedSins, date: new Date() })
+    );
   }
 
   print() {

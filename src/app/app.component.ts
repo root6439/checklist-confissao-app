@@ -10,6 +10,10 @@ import { CommonModule } from '@angular/common';
 import { IonRouterOutlet } from '@ionic/angular/standalone';
 import { IonicModule } from '@ionic/angular';
 
+interface IProgressData {
+  [value: string]: number;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,7 +34,7 @@ import { IonicModule } from '@ionic/angular';
 export class AppComponent implements OnInit {
   isMobile: boolean = window.screen.width <= 720;
 
-  progressData: { [value: string]: number } = {
+  progressData: IProgressData = {
     'primeiro-mandamento': 10.25,
     'segundo-mandamento': 20.5,
     'terceiro-mandamento': 30.75,
@@ -50,7 +54,6 @@ export class AppComponent implements OnInit {
 
     if (userDontSawDialog) {
       this.showDialog();
-      localStorage.setItem('userAlreadySawDialog', 'true');
     }
   }
 
@@ -58,6 +61,7 @@ export class AppComponent implements OnInit {
     this.dialog.open(DialogNoDataStorage, {
       width: this.isMobile ? '80%' : '40%',
     });
+    localStorage.setItem('userAlreadySawDialog', 'true');
   }
 
   onActivate() {

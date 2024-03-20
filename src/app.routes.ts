@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { ConfissaoComponent } from './app/confissao/confissao.component';
 import { PerguntasComponent } from './app/perguntas/perguntas.component';
 import { DicasComponent } from './app/dicas/dicas.component';
+import { HistoryComponent } from './app/history/history.component';
 
 export const routes: Routes = [
   { path: 'confissao', component: ConfissaoComponent },
@@ -13,6 +14,10 @@ export const routes: Routes = [
       import('./app/mandamentos/mandamentos.routes').then(
         (mod) => mod.MANDAMENTOS_ROUTES
       ),
+  },
+  {
+    path: 'history',
+    component: HistoryComponent,
   },
   { path: '', redirectTo: 'confissao', pathMatch: 'full' },
 ];

@@ -1,0 +1,21 @@
+<ion-content class="ion-padding">
+  <h1>history working</h1>
+
+  <mat-accordion multi>
+    @for (data of historyData; track data.id) {
+    <mat-expansion-panel (click)="getData(data.id)">
+      <mat-expansion-panel-header>
+        <mat-panel-title> {{ data.date | date }} </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <ul>
+        @for (sin of data.sins; track sin) {
+        <li>
+          {{ sin.text }}
+        </li>
+        }
+      </ul>
+    </mat-expansion-panel>
+    }
+  </mat-accordion>
+</ion-content>

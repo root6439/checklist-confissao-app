@@ -5455,15 +5455,6 @@
         "hash": "sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ=="
       }
     },
-    "npm:deepmerge": {
-      "type": "npm",
-      "name": "npm:deepmerge",
-      "data": {
-        "version": "4.3.1",
-        "packageName": "deepmerge",
-        "hash": "sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A=="
-      }
-    },
     "npm:default-gateway": {
       "type": "npm",
       "name": "npm:default-gateway",
@@ -8153,15 +8144,6 @@
         "version": "2.6.2",
         "packageName": "neo-async",
         "hash": "sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw=="
-      }
-    },
-    "npm:ngrx-store-localstorage": {
-      "type": "npm",
-      "name": "npm:ngrx-store-localstorage",
-      "data": {
-        "version": "17.0.0",
-        "packageName": "ngrx-store-localstorage",
-        "hash": "sha512-tub6zwYsU+5aG8y2pV30C9Gz7ff2nlmUDOB4O9JVxU6ZrgogDzDR/+FpY5BgPv/1KNYD0aNXCfv0iCuxDVMBEQ=="
       }
     },
     "npm:nice-napi": {
@@ -21612,33 +21594,6 @@
       {
         "source": "npm:needle",
         "target": "npm:sax",
-        "type": "static"
-      }
-    ],
-    "npm:ngrx-store-localstorage": [
-      {
-        "source": "npm:ngrx-store-localstorage",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "npm:ngrx-store-localstorage",
-        "target": "npm:@angular/core",
-        "type": "static"
-      },
-      {
-        "source": "npm:ngrx-store-localstorage",
-        "target": "npm:@ngrx/store",
-        "type": "static"
-      },
-      {
-        "source": "npm:ngrx-store-localstorage",
-        "target": "npm:deepmerge",
-        "type": "static"
-      },
-      {
-        "source": "npm:ngrx-store-localstorage",
-        "target": "npm:tslib",
         "type": "static"
       }
     ],

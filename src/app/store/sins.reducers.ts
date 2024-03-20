@@ -1,12 +1,12 @@
-import { createReducer, on } from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 import { addSin, clear, removeSin } from './sins.actions';
-import { AppState, ISin } from './app-state';
+import { AppState } from './app-state';
 
 const initialState: AppState = {
   sins: [],
 };
 
-export const sinReducer = createReducer(
+const _sinReducer = createReducer(
   initialState,
   on(addSin, (state, { text }) => ({
     ...state,
@@ -18,3 +18,7 @@ export const sinReducer = createReducer(
   })),
   on(clear, (state) => ({ ...state, sins: [] }))
 );
+
+export function sinReducer(state: AppState | undefined, action: Action) {
+  return _sinReducer(state, action);
+}
