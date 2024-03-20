@@ -19,19 +19,14 @@
   </div>
 
   <div class="options">
-    <button mat-stroked-button class="mr-2" [routerLink]="[previousRoute]">
-      Voltar
-    </button>
-
-    <button mat-flat-button color="primary" [routerLink]="[nextRoute]">
-      Avançar
+    <button mat-fab color="accent">
       <mat-icon> keyboard_arrow_right </mat-icon>
     </button>
 
-    <button mat-button [matMenuTriggerFor]="menu">Limpar</button>
+    <!-- <button mat-button [matMenuTriggerFor]="menu">Limpar</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Limpar este mandamento</button>
       <button mat-menu-item>Limpar tudo</button>
-    </mat-menu>
+    </mat-menu> -->
   </div>
 </div>

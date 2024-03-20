@@ -38,9 +38,6 @@ export class SinListComponent implements OnInit {
   sins: Pecado[] = [];
 
   @Input()
-  previousRoute = '';
-
-  @Input()
   nextRoute = '';
 
   selectedSins: string[] = [];

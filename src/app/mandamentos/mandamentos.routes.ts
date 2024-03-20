@@ -19,4 +19,5 @@ export const MANDAMENTOS_ROUTES: Routes = [
   { path: 'setimo-e-decimo-mandamentos', component: SetimoEDecimoComponent },
   { path: 'oitavo-mandamento', component: OitavoComponent },
   { path: 'imprimir', component: ImprimirComponent },
+  { path: '', redirectTo: 'primeiro-mandamento', pathMatch: 'full' },
 ];

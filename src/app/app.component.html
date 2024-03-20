@@ -1,6 +1,10 @@
 <ion-app>
   <ion-header>
     <mat-toolbar color="accent">
+      <button mat-icon-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+
       <ion-title> A Sagrada Confissão </ion-title>
     </mat-toolbar>
 
@@ -12,16 +16,14 @@
     ></mat-progress-bar>
   </ion-header>
 
-  <!-- <ion-content class="ion-padding"> COnteudo </ion-content> -->
-
   <ion-content>
     <ion-router-outlet (activate)="onActivate()"></ion-router-outlet>
 
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button
-          tab="checklist/primeiro-mandamento"
-          routerLink="checklist/primeiro-mandamento"
+          tab="checklist"
+          [routerLink]="['checklist/primeiro-mandamento']"
         >
           <mat-icon>check</mat-icon>
           Checklist

@@ -6,8 +6,8 @@ import { Router, RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { CommonModule } from '@angular/common';
-import { IonRouterOutlet } from '@ionic/angular/standalone';
+import { CommonModule, Location } from '@angular/common';
+import { IonRouterOutlet, NavController } from '@ionic/angular/standalone';
 import { IonicModule } from '@ionic/angular';
 
 interface IProgressData {
@@ -32,6 +32,12 @@ interface IProgressData {
   ],
 })
 export class AppComponent implements OnInit {
+  constructor(
+    private router: Router,
+    private dialog: MatDialog,
+    private navCtrl: NavController
+  ) {}
+
   isMobile: boolean = window.screen.width <= 720;
 
   progressData: IProgressData = {
@@ -44,8 +50,6 @@ export class AppComponent implements OnInit {
     'setimo-e-decimo-mandamentos': 80.75,
     'oitavo-mandamento': 100,
   };
-
-  constructor(private router: Router, private dialog: MatDialog) {}
 
   ngOnInit(): void {
     let userDontSawDialog = Boolean(
@@ -66,6 +70,10 @@ export class AppComponent implements OnInit {
 
   onActivate() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  goBack() {
+    this.navCtrl.back();
   }
 
   get progress(): number {

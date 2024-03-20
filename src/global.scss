@@ -67,8 +67,10 @@ p {
 .options {
   position: fixed;
   bottom: 0;
-  background-color: #ffffff;
-  width: 100%;
+  width: calc(100% - 48px);
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .options::before {
