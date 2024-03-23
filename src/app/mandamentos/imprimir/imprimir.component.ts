@@ -103,9 +103,6 @@ Minha última Confissão foi há... (dizer a data da última confissão, ao meno
         currentY += lineHeight; // Incrementa a posição Y para a próxima linha
         currentLine++;
       }
-
-      // positionY += 20;
-      // this.addText(doc, value, positionY);
     });
 
     doc.addPage();

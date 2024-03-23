@@ -88,7 +88,7 @@
       },
       {
         "file": "android/app/build.gradle",
-        "hash": "1267374346914507128"
+        "hash": "3307990090258428280"
       },
       {
         "file": "android/app/capacitor.build.gradle",
@@ -320,7 +320,7 @@
       },
       {
         "file": "src/app-config.ts",
-        "hash": "874056086946070737"
+        "hash": "6192072626141903041"
       },
       {
         "file": "src/app.routes.ts",
@@ -328,7 +328,7 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "5472098710023818853"
+        "hash": "9009102657420804105"
       },
       {
         "file": "src/app/app.component.scss",
@@ -340,7 +340,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "12885072777614595353"
+        "hash": "11892844052698031398"
       },
       {
         "file": "src/app/confissao/confissao.component.html",
@@ -376,7 +376,7 @@
       },
       {
         "file": "src/app/history/history.component.html",
-        "hash": "13853696988970331638"
+        "hash": "7412560953600279606"
       },
       {
         "file": "src/app/history/history.component.scss",
@@ -404,7 +404,7 @@
       },
       {
         "file": "src/app/mandamentos/imprimir/imprimir.component.ts",
-        "hash": "8102571379296880788"
+        "hash": "179233596137170203"
       },
       {
         "file": "src/app/mandamentos/mandamentos.routes.ts",
@@ -637,10 +637,6 @@
       {
         "file": "src/app/store/history/history.state.ts",
         "hash": "4526000041273904852"
-      },
-      {
-        "file": "src/app/store/local-store.reducer.ts",
-        "hash": "9617073379041034223"
       },
       {
         "file": "src/app/store/sins.actions.ts",
