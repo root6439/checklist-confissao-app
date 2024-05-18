@@ -1,4 +1,4 @@
-<div>
+<div class="mb-5">
   <div class="pb-5">
     <h1>{{ title }}</h1>
 
@@ -11,10 +11,12 @@
       <mat-checkbox
         color="primary"
         (change)="toggleSin(sin.texto, $event.checked)"
+        class="checkbox"
       >
         {{ sin.texto }}
       </mat-checkbox>
     </p>
+    <hr />
     }
   </div>
 
@@ -22,11 +24,5 @@
     <button mat-fab color="accent" [routerLink]="nextRoute">
       <mat-icon> keyboard_arrow_right </mat-icon>
     </button>
-
-    <!-- <button mat-button [matMenuTriggerFor]="menu">Limpar</button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Limpar este mandamento</button>
-      <button mat-menu-item>Limpar tudo</button>
-    </mat-menu> -->
   </div>
 </div>

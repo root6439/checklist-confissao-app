@@ -71,7 +71,7 @@ export const QUARTO_MANDAMENTO: Mandamento = {
     },
     {
       texto:
-        'Fui negligente em conduzir meu gilhos à Missa aos domingos e dias santos de guarda e na recepção dos sacramentos.',
+        'Fui negligente em conduzir meu(s) filho(s) à Missa aos domingos e dias santos de guarda e na recepção dos sacramentos.',
     },
     {
       texto: 'Deixo meus filhos crescerem na ignorância, indolência ou pecado.',
@@ -120,10 +120,6 @@ export const QUARTO_MANDAMENTO: Mandamento = {
       texto: 'Tenho raiva ou aversão aos meus pais ou superiores legítimos.',
     },
     {
-      texto:
-        'Fui amável com os estranhos e, ao contrário, pouco amável com os de casa.',
-    },
-    {
       texto: 'Zanguei-me com meus irmãos ou maltratei-os.',
     },
     {
@@ -154,10 +150,6 @@ export const QUARTO_MANDAMENTO: Mandamento = {
     {
       texto:
         'Maltratei meu conjuge sem consideração pelo bem-estar dele(a) e sem preocupação com a caridade.',
-    },
-    {
-      texto:
-        'Fui amável com estranhos e, ao contrário, pouco amável com os de casa.',
     },
     {
       texto: 'Coloco obstáculos ao cumprimento de seus deveres religiosos.',

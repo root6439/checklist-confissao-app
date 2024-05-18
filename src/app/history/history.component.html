@@ -6,6 +6,20 @@
     <mat-expansion-panel (click)="getData(data.id)">
       <mat-expansion-panel-header>
         <mat-panel-title> {{ data.date | date }} </mat-panel-title>
+        <button
+          mat-icon-button
+          color="primary"
+          (click)="handleConfession(data, true)"
+        >
+          <mat-icon> check </mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="warn"
+          (click)="handleConfession(data, false)"
+        >
+          <mat-icon> delete </mat-icon>
+        </button>
       </mat-expansion-panel-header>
 
       <ul>
@@ -17,7 +31,7 @@
       </ul>
     </mat-expansion-panel>
     } @empty {
-    <p>Você ainda não fez nenhum exame de consciência</p>
+    <p>Não há exames de consciência para exibir!</p>
     }
   </mat-accordion>
 </ion-content>
