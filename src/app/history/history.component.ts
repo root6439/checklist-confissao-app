@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { IonContent } from '@ionic/angular/standalone';
 import { History } from '../shared/models/History';
@@ -13,8 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { addHistory, removeHistory } from '../store/history/history.actions';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import confetti from 'canvas-confetti';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-history',
@@ -31,16 +32,23 @@ import confetti from 'canvas-confetti';
   ],
 })
 export class HistoryComponent implements OnInit {
-  constructor(private store: Store<HistoryState>, private dialog: MatDialog) {}
+  constructor(
+    private store: Store<HistoryState>,
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar
+  ) {}
+
+  private readonly destroy: DestroyRef = inject(DestroyRef);
 
   historyData: History[] = [];
 
   public ngOnInit() {
-    this.store.select(selectHistory).subscribe((data) => {
-      this.historyData = data;
-    });
-
-    this.store.dispatch(addHistory({ sins: [], date: new Date() }));
+    this.store
+      .select(selectHistory)
+      .pipe(takeUntilDestroyed(this.destroy))
+      .subscribe((data) => {
+        this.historyData = data;
+      });
   }
 
   public getData(id: number) {
@@ -52,6 +60,7 @@ export class HistoryComponent implements OnInit {
 
     this.store
       .select(selectSinsOfHistoryById(id))
+      .pipe(takeUntilDestroyed(this.destroy))
       .subscribe((value) => (history.sins = value));
   }
 
@@ -70,15 +79,18 @@ export class HistoryComponent implements OnInit {
   private confessionDone(data: History) {
     this.celebrate();
     this.deleteExam(data);
+    this.showMessage('Confissão concluída');
   }
 
   private openDialogConfirmExclusion(data: History) {
     this.dialog
       .open(HaveYouConfessateComponent)
       .afterClosed()
+      .pipe(takeUntilDestroyed(this.destroy))
       .subscribe((confirm: boolean) => {
         if (confirm) {
           this.deleteExam(data);
+          this.showMessage('Registro excluído');
         }
       });
   }
@@ -90,6 +102,10 @@ export class HistoryComponent implements OnInit {
       origin: { y: 0.6 },
       zIndex: 1000,
     });
+  }
+
+  private showMessage(msg: string) {
+    this.snackBar.open(msg, null, { duration: 3000 });
   }
 }
 

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, DestroyRef, Input, OnInit, inject } from '@angular/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RouterModule } from '@angular/router';
 import { IonContent } from '@ionic/angular/standalone';
@@ -10,6 +10,7 @@ import { selectSins } from 'src/app/store/sins.selectors';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'sin-list',
@@ -42,9 +43,12 @@ export class SinListComponent implements OnInit {
 
   selectedSins: string[] = [];
 
+  private readonly destroy: DestroyRef = inject(DestroyRef);
+
   ngOnInit() {
     this.store
       .select(selectSins)
+      .pipe(takeUntilDestroyed(this.destroy))
       .subscribe(
         (resp) => (this.selectedSins = resp.map((value) => value.text))
       );

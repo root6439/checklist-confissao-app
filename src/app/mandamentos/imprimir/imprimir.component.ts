@@ -1,5 +1,5 @@
 import { MatIconModule } from '@angular/material/icon';
-import { Component, OnInit } from '@angular/core';
+import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { IonContent } from '@ionic/angular/standalone';
@@ -10,6 +10,7 @@ import { Store } from '@ngrx/store';
 import { AppState, ISin } from 'src/app/store/app-state';
 import { selectSins } from 'src/app/store/sins.selectors';
 import { addHistory } from 'src/app/store/history/history.actions';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-imprimir',
@@ -27,11 +28,14 @@ import { addHistory } from 'src/app/store/history/history.actions';
 export class ImprimirComponent implements OnInit {
   constructor(private store: Store<AppState>) {}
 
+  private readonly destroy: DestroyRef = inject(DestroyRef);
+
   selectedSins: ISin[] = [];
 
   ngOnInit(): void {
     this.store
       .select(selectSins)
+      .pipe(takeUntilDestroyed(this.destroy))
       .subscribe((sins) => (this.selectedSins = sins));
 
     this.store.dispatch(
