@@ -16,6 +16,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import confetti from 'canvas-confetti';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { ShareService } from '../shared/services/share.service';
 
 @Component({
   selector: 'app-history',
@@ -35,7 +36,8 @@ export class HistoryComponent implements OnInit {
   constructor(
     private store: Store<HistoryState>,
     private dialog: MatDialog,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private shareService: ShareService
   ) {}
 
   private readonly destroy: DestroyRef = inject(DestroyRef);
@@ -106,6 +108,10 @@ export class HistoryComponent implements OnInit {
 
   private showMessage(msg: string) {
     this.snackBar.open(msg, null, { duration: 3000 });
+  }
+
+  public share(data: History) {
+    this.shareService.shareFile(data.sins);
   }
 }
 
