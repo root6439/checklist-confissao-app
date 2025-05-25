@@ -1,4 +1,11 @@
-import { Component, DestroyRef, OnInit, inject, input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  DestroyRef,
+  OnInit,
+  inject,
+  input,
+} from '@angular/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RouterModule } from '@angular/router';
 
@@ -13,16 +20,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
-    selector: 'sin-list',
-    templateUrl: './sin-list.component.html',
-    styleUrls: ['./sin-list.component.scss'],
-    imports: [
+  selector: 'sin-list',
+  templateUrl: './sin-list.component.html',
+  styleUrls: ['./sin-list.component.scss'],
+  imports: [
     RouterModule,
     MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
-    MatMenuModule
-]
+    MatMenuModule,
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SinListComponent implements OnInit {
   private store = inject<Store<AppState>>(Store);

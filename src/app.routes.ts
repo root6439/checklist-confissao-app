@@ -1,13 +1,25 @@
 import { Routes } from '@angular/router';
-import { ConfissaoComponent } from './app/confissao/confissao.component';
-import { PerguntasComponent } from './app/perguntas/perguntas.component';
-import { DicasComponent } from './app/dicas/dicas.component';
-import { HistoryComponent } from './app/history/history.component';
 
 export const routes: Routes = [
-  { path: 'confissao', component: ConfissaoComponent },
-  { path: 'perguntas', component: PerguntasComponent },
-  { path: 'dicas', component: DicasComponent },
+  {
+    path: 'confissao',
+    loadComponent: () =>
+      import('./app/confissao/confissao.component').then(
+        (c) => c.ConfissaoComponent
+      ),
+  },
+  {
+    path: 'perguntas',
+    loadComponent: () =>
+      import('./app/perguntas/perguntas.component').then(
+        (c) => c.PerguntasComponent
+      ),
+  },
+  {
+    path: 'dicas',
+    loadComponent: () =>
+      import('./app/dicas/dicas.component').then((c) => c.DicasComponent),
+  },
   {
     path: 'checklist',
     loadChildren: () =>
@@ -17,7 +29,8 @@ export const routes: Routes = [
   },
   {
     path: 'history',
-    component: HistoryComponent,
+    loadComponent: () =>
+      import('./app/history/history.component').then((c) => c.HistoryComponent),
   },
-  { path: '', redirectTo: 'confissao', pathMatch: 'full' },
+  { path: '', redirectTo: 'checklist', pathMatch: 'full' },
 ];
