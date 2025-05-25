@@ -23,7 +23,13 @@ import { ShareService } from 'src/app/shared/services/share.service';
     ]
 })
 export class ImprimirComponent implements OnInit {
-  constructor(private store: Store<AppState>, private shareService: ShareService) {}
+  private store = inject<Store<AppState>>(Store);
+  private shareService = inject(ShareService);
+
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {}
 
   private readonly destroy: DestroyRef = inject(DestroyRef);
 

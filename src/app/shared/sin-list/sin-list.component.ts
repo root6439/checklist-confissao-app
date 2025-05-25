@@ -1,7 +1,7 @@
-import { Component, DestroyRef, Input, OnInit, inject } from '@angular/core';
+import { Component, DestroyRef, OnInit, inject, input } from '@angular/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RouterModule } from '@angular/router';
-import { IonContent } from '@ionic/angular/standalone';
+
 import { Store } from '@ngrx/store';
 import { AppState } from '@capacitor/app';
 import { addSin, removeSin } from 'src/app/store/sins.actions';
@@ -17,28 +17,28 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     templateUrl: './sin-list.component.html',
     styleUrls: ['./sin-list.component.scss'],
     imports: [
-        IonContent,
-        RouterModule,
-        MatCheckboxModule,
-        MatButtonModule,
-        MatIconModule,
-        MatMenuModule,
-    ]
+    RouterModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule
+]
 })
 export class SinListComponent implements OnInit {
-  constructor(private store: Store<AppState>) {}
+  private store = inject<Store<AppState>>(Store);
 
-  @Input()
-  title = '';
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
 
-  @Input()
-  subtitle = '';
+  constructor() {}
 
-  @Input()
-  sins: Pecado[] = [];
+  readonly title = input('');
 
-  @Input()
-  nextRoute = '';
+  readonly subtitle = input('');
+
+  readonly sins = input<Pecado[]>([]);
+
+  readonly nextRoute = input('');
 
   selectedSins: string[] = [];
 

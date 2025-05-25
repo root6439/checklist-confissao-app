@@ -8,16 +8,15 @@
       <ion-title> A Sagrada Confissão </ion-title>
     </mat-toolbar>
 
-    <mat-progress-bar
-      mode="determinate"
+    <mat-progress-bar mode="determinate"
       [value]="progress"
       color="primary"
       *ngIf="progress != 0"
-    ></mat-progress-bar>
+     />
   </ion-header>
 
   <ion-content>
-    <ion-router-outlet (activate)="onActivate()"></ion-router-outlet>
+    <ion-router-outlet (activate)="onActivate()" />
 
     <ion-tabs>
       <ion-tab-bar slot="bottom">
@@ -33,7 +32,7 @@
           Dicas
         </ion-tab-button>
         <ion-tab-button tab="confissao" routerLink="confissao">
-          <mat-icon svgIcon="cross"></mat-icon>
+          <mat-icon svgIcon="cross" />
           Confissão
         </ion-tab-button>
         <ion-tab-button tab="perguntas" routerLink="perguntas">

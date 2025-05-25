@@ -32,12 +32,15 @@ import { ShareService } from '../shared/services/share.service';
     ]
 })
 export class HistoryComponent implements OnInit {
-  constructor(
-    private store: Store<HistoryState>,
-    private dialog: MatDialog,
-    private snackBar: MatSnackBar,
-    private shareService: ShareService
-  ) {}
+  private store = inject<Store<HistoryState>>(Store);
+  private dialog = inject(MatDialog);
+  private snackBar = inject(MatSnackBar);
+  private shareService = inject(ShareService);
+
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {}
 
   private readonly destroy: DestroyRef = inject(DestroyRef);
 

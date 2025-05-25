@@ -1,12 +1,12 @@
 <div class="mb-5">
   <div class="pb-5">
-    <h1>{{ title }}</h1>
+    <h1>{{ title() }}</h1>
 
     <h3>
-      {{ subtitle }}
+      {{ subtitle() }}
     </h3>
 
-    @for (sin of sins; track sin) {
+    @for (sin of sins(); track sin.texto) {
     <p>
       <mat-checkbox
         color="primary"
@@ -21,7 +21,7 @@
   </div>
 
   <div class="options">
-    <button mat-fab color="accent" [routerLink]="nextRoute">
+    <button mat-fab color="accent" [routerLink]="nextRoute()">
       <mat-icon> keyboard_arrow_right </mat-icon>
     </button>
   </div>

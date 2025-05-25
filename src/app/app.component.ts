@@ -1,6 +1,6 @@
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Router, RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -32,13 +32,16 @@ interface IProgressData {
     ]
 })
 export class AppComponent implements OnInit {
-  constructor(
-    private router: Router,
-    private dialog: MatDialog,
-    private navCtrl: NavController,
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
-  ) {
+  private router = inject(Router);
+  private dialog = inject(MatDialog);
+  private navCtrl = inject(NavController);
+  private matIconRegistry = inject(MatIconRegistry);
+  private domSanitizer = inject(DomSanitizer);
+
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {
     this.matIconRegistry.addSvgIcon(
       'cross',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
