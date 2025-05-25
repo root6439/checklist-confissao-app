@@ -4,11 +4,10 @@ import { IonContent } from '@ionic/angular/standalone';
 import { SinListComponent } from 'src/app/shared/sin-list/sin-list.component';
 
 @Component({
-  selector: 'app-sexto-enono',
-  templateUrl: './sexto-enono.component.html',
-  styleUrls: ['./sexto-enono.component.scss'],
-  standalone: true,
-  imports: [IonContent, SinListComponent],
+    selector: 'app-sexto-enono',
+    templateUrl: './sexto-enono.component.html',
+    styleUrls: ['./sexto-enono.component.scss'],
+    imports: [IonContent, SinListComponent]
 })
 export class SextoENonoComponent {
   commandments = SEXTO_E_NONO_MANDAMENTOS;

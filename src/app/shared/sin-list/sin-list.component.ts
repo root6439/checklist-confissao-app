@@ -13,18 +13,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
-  selector: 'sin-list',
-  templateUrl: './sin-list.component.html',
-  styleUrls: ['./sin-list.component.scss'],
-  standalone: true,
-  imports: [
-    IonContent,
-    RouterModule,
-    MatCheckboxModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-  ],
+    selector: 'sin-list',
+    templateUrl: './sin-list.component.html',
+    styleUrls: ['./sin-list.component.scss'],
+    imports: [
+        IonContent,
+        RouterModule,
+        MatCheckboxModule,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+    ]
 })
 export class SinListComponent implements OnInit {
   constructor(private store: Store<AppState>) {}

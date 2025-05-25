@@ -4,11 +4,10 @@ import { IonContent } from '@ionic/angular/standalone';
 import { SinListComponent } from 'src/app/shared/sin-list/sin-list.component';
 
 @Component({
-  selector: 'app-primeiro',
-  templateUrl: './primeiro.component.html',
-  styleUrls: ['./primeiro.component.scss'],
-  standalone: true,
-  imports: [IonContent, SinListComponent],
+    selector: 'app-primeiro',
+    templateUrl: './primeiro.component.html',
+    styleUrls: ['./primeiro.component.scss'],
+    imports: [IonContent, SinListComponent]
 })
 export class PrimeiroComponent {
   commandments = PrimeiroMandamento;

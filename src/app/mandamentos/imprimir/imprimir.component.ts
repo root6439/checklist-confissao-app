@@ -11,17 +11,16 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ShareService } from 'src/app/shared/services/share.service';
 
 @Component({
-  selector: 'app-imprimir',
-  templateUrl: './imprimir.component.html',
-  styleUrls: ['./imprimir.component.scss'],
-  standalone: true,
-  imports: [
-    MatIconModule,
-    CommonModule,
-    MatIconModule,
-    MatButtonModule,
-    IonContent,
-  ],
+    selector: 'app-imprimir',
+    templateUrl: './imprimir.component.html',
+    styleUrls: ['./imprimir.component.scss'],
+    imports: [
+        MatIconModule,
+        CommonModule,
+        MatIconModule,
+        MatButtonModule,
+        IonContent,
+    ]
 })
 export class ImprimirComponent implements OnInit {
   constructor(private store: Store<AppState>, private shareService: ShareService) {}

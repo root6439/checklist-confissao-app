@@ -11,21 +11,20 @@ import { IonContent } from '@ionic/angular/standalone';
 import { SinListComponent } from 'src/app/shared/sin-list/sin-list.component';
 
 @Component({
-  selector: 'app-segundo',
-  templateUrl: './segundo.component.html',
-  styleUrls: ['./segundo.component.scss'],
-  standalone: true,
-  imports: [
-    MatCheckboxModule,
-    RouterModule,
-    CommonModule,
-    FormsModule,
-    MatIconModule,
-    MatMenuModule,
-    MatButtonModule,
-    IonContent,
-    SinListComponent,
-  ],
+    selector: 'app-segundo',
+    templateUrl: './segundo.component.html',
+    styleUrls: ['./segundo.component.scss'],
+    imports: [
+        MatCheckboxModule,
+        RouterModule,
+        CommonModule,
+        FormsModule,
+        MatIconModule,
+        MatMenuModule,
+        MatButtonModule,
+        IonContent,
+        SinListComponent,
+    ]
 })
 export class SegundoComponent {
   commandments = SEGUNDO_MANDAMENTO;

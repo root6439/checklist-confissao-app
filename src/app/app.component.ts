@@ -16,21 +16,20 @@ interface IProgressData {
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatProgressBarModule,
-    RouterModule,
-    CommonModule,
-    IonRouterOutlet,
-    IonicModule,
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatProgressBarModule,
+        RouterModule,
+        CommonModule,
+        IonRouterOutlet,
+        IonicModule,
+    ]
 })
 export class AppComponent implements OnInit {
   constructor(
@@ -98,8 +97,8 @@ export class AppComponent implements OnInit {
 }
 
 @Component({
-  selector: 'no-data-storage-warning',
-  template: `<h1 mat-dialog-title class="mb-2">
+    selector: 'no-data-storage-warning',
+    template: `<h1 mat-dialog-title class="mb-2">
       Seja bem-vindo ao Checklist Confissão!
     </h1>
     <div mat-dialog-content class="mb-2">
@@ -115,7 +114,6 @@ export class AppComponent implements OnInit {
     <div mat-dialog-actions align="end">
       <button mat-flat-button color="accent" mat-dialog-close>Ok</button>
     </div>`,
-  standalone: true,
-  imports: [MatDialogModule, MatButtonModule],
+    imports: [MatDialogModule, MatButtonModule]
 })
 export class DialogNoDataStorage {}

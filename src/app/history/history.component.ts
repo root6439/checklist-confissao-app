@@ -19,18 +19,17 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ShareService } from '../shared/services/share.service';
 
 @Component({
-  selector: 'app-history',
-  templateUrl: './history.component.html',
-  styleUrls: ['./history.component.scss'],
-  standalone: true,
-  imports: [
-    IonContent,
-    MatExpansionModule,
-    DatePipe,
-    MatButtonModule,
-    MatIconModule,
-    MatSnackBarModule,
-  ],
+    selector: 'app-history',
+    templateUrl: './history.component.html',
+    styleUrls: ['./history.component.scss'],
+    imports: [
+        IonContent,
+        MatExpansionModule,
+        DatePipe,
+        MatButtonModule,
+        MatIconModule,
+        MatSnackBarModule,
+    ]
 })
 export class HistoryComponent implements OnInit {
   constructor(
@@ -116,8 +115,8 @@ export class HistoryComponent implements OnInit {
 }
 
 @Component({
-  selector: 'app-have-you-confessate',
-  template: `
+    selector: 'app-have-you-confessate',
+    template: `
     <h2 mat-dialog-title>Exclusão de exame de consciência</h2>
     <mat-dialog-content>
       Tem certeza que deseja remover esse registro? Essa alteração não poderá
@@ -130,7 +129,6 @@ export class HistoryComponent implements OnInit {
       <button mat-button mat-dialog-close>Cancelar</button>
     </mat-dialog-actions>
   `,
-  imports: [MatDialogModule, MatButtonModule],
-  standalone: true,
+    imports: [MatDialogModule, MatButtonModule]
 })
 class HaveYouConfessateComponent {}
