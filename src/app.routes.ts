@@ -26,6 +26,7 @@ export const routes: Routes = [
       import('./app/mandamentos/mandamentos.routes').then(
         (mod) => mod.MANDAMENTOS_ROUTES
       ),
+    data: { preload: true },
   },
   {
     path: 'history',
