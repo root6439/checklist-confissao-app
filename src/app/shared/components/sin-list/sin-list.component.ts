@@ -12,12 +12,12 @@ import { RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { AppState } from '@capacitor/app';
 import { addSin, removeSin } from 'src/app/store/sins.actions';
-import { Pecado } from '../models/Mandamento';
 import { selectSins } from 'src/app/store/sins.selectors';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Pecado } from '../../models/Mandamento';
 
 @Component({
   selector: 'sin-list',
@@ -34,11 +34,6 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 })
 export class SinListComponent implements OnInit {
   private store = inject<Store<AppState>>(Store);
-
-  /** Inserted by Angular inject() migration for backwards compatibility */
-  constructor(...args: unknown[]);
-
-  constructor() {}
 
   readonly title = input('');
 

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-export const MANDAMENTOS_ROUTES: Routes = [
+export const commandmentsRoutes: Routes = [
   {
     path: 'primeiro-mandamento',
     loadComponent: () =>

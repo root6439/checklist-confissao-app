@@ -1,22 +1,22 @@
 import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { IonContent } from '@ionic/angular/standalone';
-import { History } from '../shared/models/History';
-import { DatePipe } from '../shared/pipes/date.pipe';
+import { History } from '../../shared/models/History';
+import { DatePipe } from '../../shared/pipes/date.pipe';
 import { Store } from '@ngrx/store';
 import {
   selectHistory,
   selectSinsOfHistoryById,
-} from '../store/history/history.selectors';
-import { HistoryState } from '../store/history/history.state';
+} from '../../store/history/history.selectors';
+import { HistoryState } from '../../store/history/history.state';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { addHistory, removeHistory } from '../store/history/history.actions';
+import { addHistory, removeHistory } from '../../store/history/history.actions';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import confetti from 'canvas-confetti';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ShareService } from '../shared/services/share.service';
+import { ShareService } from '../../shared/services/share.service';
 
 @Component({
     selector: 'app-history',

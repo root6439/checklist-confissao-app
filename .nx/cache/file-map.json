@@ -603,19 +603,19 @@
         "hash": "10785439015569662123"
       },
       {
-        "file": "src/app/shared/sin-list/sin-list.component.html",
+        "file": "src/app/shared/components/sin-list/sin-list.component.html",
         "hash": "12904389332957045273"
       },
       {
-        "file": "src/app/shared/sin-list/sin-list.component.scss",
+        "file": "src/app/shared/components/sin-list/sin-list.component.scss",
         "hash": "3244421341483603138"
       },
       {
-        "file": "src/app/shared/sin-list/sin-list.component.spec.ts",
+        "file": "src/app/shared/components/sin-list/sin-list.component.spec.ts",
         "hash": "9081366464182330038"
       },
       {
-        "file": "src/app/shared/sin-list/sin-list.component.ts",
+        "file": "src/app/shared/components/sin-list/sin-list.component.ts",
         "hash": "15064195292624211819"
       },
       {

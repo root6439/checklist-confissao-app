@@ -1,6 +1,6 @@
-import { OITAVO_MANDAMENTO } from './../../shared/data/OitavoMandamento';
+import { OITAVO_MANDAMENTO } from '../../../shared/data/OitavoMandamento';
 import { Component } from '@angular/core';
-import { SinListComponent } from 'src/app/shared/sin-list/sin-list.component';
+import { SinListComponent } from 'src/app/shared/components/sin-list/sin-list.component';
 import { IonContent } from '@ionic/angular/standalone';
 
 @Component({
