@@ -1,35 +1,34 @@
 import { Component, DestroyRef, OnInit, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { IonContent } from '@ionic/angular/standalone';
+import { Store } from '@ngrx/store';
 import { History } from '../../shared/models/History';
 import { DatePipe } from '../../shared/pipes/date.pipe';
-import { Store } from '@ngrx/store';
+import { ShareService } from '../../shared/services/share.service';
+import { removeHistory } from '../../store/history/history.actions';
 import {
   selectHistory,
   selectSinsOfHistoryById,
 } from '../../store/history/history.selectors';
 import { HistoryState } from '../../store/history/history.state';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { addHistory, removeHistory } from '../../store/history/history.actions';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import confetti from 'canvas-confetti';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ShareService } from '../../shared/services/share.service';
 
 @Component({
-    selector: 'app-history',
-    templateUrl: './history.component.html',
-    styleUrls: ['./history.component.scss'],
-    imports: [
-        IonContent,
-        MatExpansionModule,
-        DatePipe,
-        MatButtonModule,
-        MatIconModule,
-        MatSnackBarModule,
-    ]
+  selector: 'app-history',
+  templateUrl: './history.component.html',
+  styleUrls: ['./history.component.scss'],
+  imports: [
+    IonContent,
+    MatExpansionModule,
+    DatePipe,
+    MatButtonModule,
+    MatIconModule,
+    MatSnackBarModule,
+  ],
 })
 export class HistoryComponent implements OnInit {
   private store = inject<Store<HistoryState>>(Store);
@@ -81,7 +80,6 @@ export class HistoryComponent implements OnInit {
   }
 
   private confessionDone(data: History) {
-    this.celebrate();
     this.deleteExam(data);
     this.showMessage('Confissão concluída');
   }
@@ -99,15 +97,6 @@ export class HistoryComponent implements OnInit {
       });
   }
 
-  private celebrate() {
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-      zIndex: 1000,
-    });
-  }
-
   private showMessage(msg: string) {
     this.snackBar.open(msg, null, { duration: 3000 });
   }
@@ -118,8 +107,8 @@ export class HistoryComponent implements OnInit {
 }
 
 @Component({
-    selector: 'app-have-you-confessate',
-    template: `
+  selector: 'app-have-you-confessate',
+  template: `
     <h2 mat-dialog-title>Exclusão de exame de consciência</h2>
     <mat-dialog-content>
       Tem certeza que deseja remover esse registro? Essa alteração não poderá
@@ -132,6 +121,6 @@ export class HistoryComponent implements OnInit {
       <button mat-button mat-dialog-close>Cancelar</button>
     </mat-dialog-actions>
   `,
-    imports: [MatDialogModule, MatButtonModule]
+  imports: [MatDialogModule, MatButtonModule],
 })
 class HaveYouConfessateComponent {}
