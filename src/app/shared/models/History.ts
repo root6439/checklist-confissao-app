@@ -1,7 +1,7 @@
-import { ISin } from 'src/app/store/app-state';
+import { ISin } from './sin';
 
 export class History {
   id: number;
   date: Date;
-  sins?: ISin[];
+  sins: ISin[];
 }

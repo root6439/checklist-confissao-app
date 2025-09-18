@@ -6,16 +6,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { IonContent } from '@ionic/angular/standalone';
-import { Store } from '@ngrx/store';
 import { History } from '../../shared/models/History';
 import { DatePipe } from '../../shared/pipes/date.pipe';
 import { ShareService } from '../../shared/services/share.service';
-import { removeHistory } from '../../store/history/history.actions';
-import {
-  selectHistory,
-  selectSinsOfHistoryById,
-} from '../../store/history/history.selectors';
-import { HistoryState } from '../../store/history/history.state';
 
 @Component({
   selector: 'app-history',
@@ -31,28 +24,15 @@ import { HistoryState } from '../../store/history/history.state';
   ],
 })
 export class HistoryComponent implements OnInit {
-  private store = inject<Store<HistoryState>>(Store);
   private dialog = inject(MatDialog);
   private snackBar = inject(MatSnackBar);
   private shareService = inject(ShareService);
-
-  /** Inserted by Angular inject() migration for backwards compatibility */
-  constructor(...args: unknown[]);
-
-  constructor() {}
 
   private readonly destroy: DestroyRef = inject(DestroyRef);
 
   historyData: History[] = [];
 
-  public ngOnInit() {
-    this.store
-      .select(selectHistory)
-      .pipe(takeUntilDestroyed(this.destroy))
-      .subscribe((data) => {
-        this.historyData = data;
-      });
-  }
+  public ngOnInit() {}
 
   public getData(id: number) {
     const history = this.historyData.find((value) => value.id == id);
@@ -60,11 +40,6 @@ export class HistoryComponent implements OnInit {
     if (history.sins?.length > 0) {
       return;
     }
-
-    this.store
-      .select(selectSinsOfHistoryById(id))
-      .pipe(takeUntilDestroyed(this.destroy))
-      .subscribe((value) => (history.sins = value));
   }
 
   public handleConfession(data: History, confessionDone: boolean) {
@@ -75,9 +50,7 @@ export class HistoryComponent implements OnInit {
     }
   }
 
-  private deleteExam(data: History) {
-    this.store.dispatch(removeHistory({ id: data.id }));
-  }
+  private deleteExam(data: History) {}
 
   private confessionDone(data: History) {
     this.deleteExam(data);

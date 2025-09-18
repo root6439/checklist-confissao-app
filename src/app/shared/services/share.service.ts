@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Filesystem, Directory } from '@capacitor/filesystem';
+import { Directory, Filesystem } from '@capacitor/filesystem';
 import { Share } from '@capacitor/share';
 import { jsPDF } from 'jspdf';
-import { ISin } from 'src/app/store/app-state';
+import { ISin } from '../models/sin';
 
 @Injectable({
   providedIn: 'root',
