@@ -1,14 +1,15 @@
-import { Component, DestroyRef, OnInit, inject } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { IonContent } from '@ionic/angular/standalone';
+import { take } from 'rxjs';
 import { History } from '../../shared/models/History';
 import { DatePipe } from '../../shared/pipes/date.pipe';
 import { ShareService } from '../../shared/services/share.service';
+import { HistoryService } from './services/history.service';
 
 @Component({
   selector: 'app-history',
@@ -24,23 +25,14 @@ import { ShareService } from '../../shared/services/share.service';
   ],
 })
 export class HistoryComponent implements OnInit {
-  private dialog = inject(MatDialog);
-  private snackBar = inject(MatSnackBar);
-  private shareService = inject(ShareService);
+  readonly dialog = inject(MatDialog);
+  readonly snackBar = inject(MatSnackBar);
+  readonly shareService = inject(ShareService);
+  readonly historyService = inject(HistoryService);
 
-  private readonly destroy: DestroyRef = inject(DestroyRef);
-
-  historyData: History[] = [];
+  readonly historyData = this.historyService.exams;
 
   public ngOnInit() {}
-
-  public getData(id: number) {
-    const history = this.historyData.find((value) => value.id == id);
-
-    if (history.sins?.length > 0) {
-      return;
-    }
-  }
 
   public handleConfession(data: History, confessionDone: boolean) {
     if (confessionDone) {
@@ -50,7 +42,9 @@ export class HistoryComponent implements OnInit {
     }
   }
 
-  private deleteExam(data: History) {}
+  private deleteExam(data: History) {
+    this.historyService.removeExam(data.id);
+  }
 
   private confessionDone(data: History) {
     this.deleteExam(data);
@@ -61,7 +55,7 @@ export class HistoryComponent implements OnInit {
     this.dialog
       .open(HaveYouConfessateComponent)
       .afterClosed()
-      .pipe(takeUntilDestroyed(this.destroy))
+      .pipe(take(1))
       .subscribe((confirm: boolean) => {
         if (confirm) {
           this.deleteExam(data);
@@ -71,7 +65,7 @@ export class HistoryComponent implements OnInit {
   }
 
   private showMessage(msg: string) {
-    this.snackBar.open(msg, null, { duration: 3000 });
+    this.snackBar.open(msg, undefined, { duration: 3000 });
   }
 
   public share(data: History) {

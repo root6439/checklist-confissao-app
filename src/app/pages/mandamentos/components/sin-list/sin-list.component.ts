@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   OnInit,
+  inject,
   input,
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -9,7 +10,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
-import { Pecado } from '../../models/Mandamento';
+import { Pecado } from '../../../../shared/models/Mandamento';
+import { SinsCommittedService } from '../../services/sins-committed.service';
 
 @Component({
   selector: 'sin-list',
@@ -25,6 +27,8 @@ import { Pecado } from '../../models/Mandamento';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SinListComponent implements OnInit {
+  readonly s = inject(SinsCommittedService);
+
   readonly title = input.required<string>();
   readonly subtitle = input.required<string>();
   readonly sins = input.required<Pecado[]>();
@@ -34,5 +38,7 @@ export class SinListComponent implements OnInit {
 
   ngOnInit() {}
 
-  toggleSin(text: string, checked: boolean) {}
+  toggleSin(text: string, checked: boolean) {
+    checked ? this.s.addSin({ text }) : this.s.removeSin({ text });
+  }
 }

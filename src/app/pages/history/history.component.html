@@ -2,8 +2,8 @@
   <h1 class="mb-3">Histórico de confissões</h1>
 
   <mat-accordion multi>
-    @for (data of historyData; track data.id) {
-    <mat-expansion-panel (click)="getData(data.id)">
+    @for (data of historyData(); track data.id) {
+    <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title> {{ data.date | date }} </mat-panel-title>
         <button
@@ -20,17 +20,13 @@
         >
           <mat-icon> delete </mat-icon>
         </button>
-        <button
-          mat-icon-button
-          color="primary"
-          (click)="share(data)"
-        >
+        <button mat-icon-button color="primary" (click)="share(data)">
           <mat-icon> share </mat-icon>
         </button>
       </mat-expansion-panel-header>
 
       <ul>
-        @for (sin of data.sins; track sin) {
+        @for (sin of data.sins; track $index) {
         <li>
           {{ sin.text }}
         </li>

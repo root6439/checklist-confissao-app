@@ -1,7 +1,7 @@
 import { ISin } from './sin';
 
-export class History {
+export type History = {
   id: number;
   date: Date;
   sins: ISin[];
-}
+};

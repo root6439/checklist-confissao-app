@@ -1,7 +1,7 @@
-import { TERCEIRO_MANDAMENTO } from '../../../shared/data/TerceiroMandamento';
 import { Component } from '@angular/core';
 import { IonContent } from '@ionic/angular/standalone';
-import { SinListComponent } from 'src/app/shared/components/sin-list/sin-list.component';
+import { SinListComponent } from 'src/app/pages/mandamentos/components/sin-list/sin-list.component';
+import { TERCEIRO_MANDAMENTO } from '../../../../shared/data/TerceiroMandamento';
 
 @Component({
     selector: 'app-terceiro',

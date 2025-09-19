@@ -26,9 +26,11 @@
   </p>
 
   <ul>
-    <li *ngFor="let item of selectedSins">
+    @for (item of selectedSins(); track $index) {
+    <li>
       {{ item.text }}
     </li>
+    }
   </ul>
 
   <p>Depois da confissão dos pecados, o penitente diz:</p>

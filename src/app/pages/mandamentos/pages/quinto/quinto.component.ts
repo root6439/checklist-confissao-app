@@ -1,7 +1,7 @@
-import { QUINTO_MANDAMENTO } from '../../../shared/data/QuintoMandamento';
 import { Component } from '@angular/core';
 import { IonContent } from '@ionic/angular/standalone';
-import { SinListComponent } from 'src/app/shared/components/sin-list/sin-list.component';
+import { SinListComponent } from 'src/app/pages/mandamentos/components/sin-list/sin-list.component';
+import { QUINTO_MANDAMENTO } from '../../../../shared/data/QuintoMandamento';
 
 @Component({
     selector: 'app-quinto',

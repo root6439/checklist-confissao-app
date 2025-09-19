@@ -1,8 +1,8 @@
-export class Mandamento {
+export type Mandamento = {
   pecados: Pecado[];
-}
+};
 
-export class Pecado {
+export type Pecado = {
   texto: string;
   selecionado?: boolean;
-}
+};

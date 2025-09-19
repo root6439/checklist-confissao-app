@@ -1,7 +1,7 @@
-import { SEXTO_E_NONO_MANDAMENTOS } from '../../../shared/data/SextoENonoMandamento';
 import { Component } from '@angular/core';
 import { IonContent } from '@ionic/angular/standalone';
-import { SinListComponent } from 'src/app/shared/components/sin-list/sin-list.component';
+import { SinListComponent } from 'src/app/pages/mandamentos/components/sin-list/sin-list.component';
+import { SEXTO_E_NONO_MANDAMENTOS } from '../../../../shared/data/SextoENonoMandamento';
 
 @Component({
     selector: 'app-sexto-enono',
