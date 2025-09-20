@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -23,16 +23,15 @@ import { HistoryService } from './services/history.service';
     MatIconModule,
     MatSnackBarModule,
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HistoryComponent implements OnInit {
+export class HistoryComponent {
   readonly dialog = inject(MatDialog);
   readonly snackBar = inject(MatSnackBar);
   readonly shareService = inject(ShareService);
   readonly historyService = inject(HistoryService);
 
   readonly historyData = this.historyService.exams;
-
-  public ngOnInit() {}
 
   public handleConfession(data: History, confessionDone: boolean) {
     if (confessionDone) {

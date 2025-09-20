@@ -1,35 +1,35 @@
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule } from '@angular/material/button';
-import { Component, OnInit, inject } from '@angular/core';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { Router, RouterModule } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CommonModule } from '@angular/common';
-import { IonRouterOutlet, NavController } from '@ionic/angular/standalone';
-import { IonicModule } from '@ionic/angular';
+import { Component, OnInit, inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router, RouterModule } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+import { IonRouterOutlet, NavController } from '@ionic/angular/standalone';
 
 interface IProgressData {
   [value: string]: number;
 }
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    imports: [
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatMenuModule,
-        MatProgressBarModule,
-        RouterModule,
-        CommonModule,
-        IonRouterOutlet,
-        IonicModule,
-    ]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  imports: [
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatProgressBarModule,
+    RouterModule,
+    CommonModule,
+    IonRouterOutlet,
+    IonicModule,
+  ],
 })
 export class AppComponent implements OnInit {
   private router = inject(Router);
@@ -37,9 +37,6 @@ export class AppComponent implements OnInit {
   private navCtrl = inject(NavController);
   private matIconRegistry = inject(MatIconRegistry);
   private domSanitizer = inject(DomSanitizer);
-
-  /** Inserted by Angular inject() migration for backwards compatibility */
-  constructor(...args: unknown[]);
 
   constructor() {
     this.matIconRegistry.addSvgIcon(
@@ -100,8 +97,8 @@ export class AppComponent implements OnInit {
 }
 
 @Component({
-    selector: 'no-data-storage-warning',
-    template: `<h1 mat-dialog-title class="mb-2">
+  selector: 'no-data-storage-warning',
+  template: `<h1 mat-dialog-title class="mb-2">
       Seja bem-vindo ao Checklist Confissão!
     </h1>
     <div mat-dialog-content class="mb-2">
@@ -117,6 +114,6 @@ export class AppComponent implements OnInit {
     <div mat-dialog-actions align="end">
       <button mat-flat-button color="accent" mat-dialog-close>Ok</button>
     </div>`,
-    imports: [MatDialogModule, MatButtonModule]
+  imports: [MatDialogModule, MatButtonModule],
 })
 export class DialogNoDataStorage {}

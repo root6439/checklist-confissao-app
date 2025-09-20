@@ -1,9 +1,8 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  OnInit,
   inject,
-  input,
+  input
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -26,7 +25,7 @@ import { SinsCommittedService } from '../../services/sins-committed.service';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SinListComponent implements OnInit {
+export class SinListComponent {
   readonly s = inject(SinsCommittedService);
 
   readonly title = input.required<string>();
@@ -35,8 +34,6 @@ export class SinListComponent implements OnInit {
   readonly nextRoute = input.required<string>();
 
   selectedSins: string[] = [];
-
-  ngOnInit() {}
 
   toggleSin(text: string, checked: boolean) {
     checked ? this.s.addSin({ text }) : this.s.removeSin({ text });
