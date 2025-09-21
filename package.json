@@ -16,12 +16,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^20.3.1",
-    "@angular/cdk": "^19.2.17",
+    "@angular/cdk": "^20.2.4",
     "@angular/common": "^20.3.1",
     "@angular/compiler": "^20.3.1",
     "@angular/core": "^20.3.1",
     "@angular/forms": "^20.3.1",
-    "@angular/material": "^19.2.17",
+    "@angular/material": "^20.2.4",
     "@angular/platform-browser": "^20.3.1",
     "@angular/platform-browser-dynamic": "^20.3.1",
     "@angular/router": "^20.3.1",
@@ -59,13 +59,5 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.9.2"
   },
-  "description": "Checklist confissão para facilitar exames de consciência",
-  "browserslist": [
-    "Chrome >=79",
-    "ChromeAndroid >=79",
-    "Firefox >=70",
-    "Edge >=79",
-    "Safari >=14",
-    "iOS >=14"
-  ]
+  "description": "Checklist confissão para facilitar exames de consciência"
 }

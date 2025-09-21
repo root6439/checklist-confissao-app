@@ -1,4 +1,3 @@
-
 import { Component, OnInit, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -9,7 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
-import { IonRouterOutlet, NavController } from '@ionic/angular/standalone';
+import { NavController } from '@ionic/angular/standalone';
 
 interface IProgressData {
   [value: string]: number;
@@ -26,9 +25,8 @@ interface IProgressData {
     MatMenuModule,
     MatProgressBarModule,
     RouterModule,
-    IonRouterOutlet,
-    IonicModule
-],
+    IonicModule,
+  ],
 })
 export class AppComponent implements OnInit {
   private router = inject(Router);
