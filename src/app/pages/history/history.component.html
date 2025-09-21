@@ -9,18 +9,26 @@
         <button
           mat-icon-button
           color="primary"
-          (click)="handleConfession(data, true)"
+          (click)="
+            handleConfession(data, true); $event.stopImmediatePropagation()
+          "
         >
           <mat-icon> check </mat-icon>
         </button>
         <button
           mat-icon-button
           color="warn"
-          (click)="handleConfession(data, false)"
+          (click)="
+            handleConfession(data, false); $event.stopImmediatePropagation()
+          "
         >
           <mat-icon> delete </mat-icon>
         </button>
-        <button mat-icon-button color="primary" (click)="share(data)">
+        <button
+          mat-icon-button
+          color="primary"
+          (click)="share(data); $event.stopImmediatePropagation()"
+        >
           <mat-icon> share </mat-icon>
         </button>
       </mat-expansion-panel-header>

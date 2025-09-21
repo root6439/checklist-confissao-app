@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { ISin } from '../../../shared/models/sin';
+import { ISin } from '../models/sin';
 
 @Injectable({
   providedIn: 'root',

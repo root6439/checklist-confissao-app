@@ -1,4 +1,4 @@
-import { ISin } from './sin';
+import { ISin } from '../../mandamentos/models/sin';
 
 export type History = {
   id: number;

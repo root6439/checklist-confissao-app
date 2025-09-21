@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Directory, Filesystem } from '@capacitor/filesystem';
 import { Share } from '@capacitor/share';
 import { jsPDF } from 'jspdf';
-import { ISin } from '../models/sin';
+import { ISin } from '../../pages/mandamentos/models/sin';
 
 @Injectable({
   providedIn: 'root',

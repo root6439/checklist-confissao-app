@@ -9,10 +9,7 @@
     </mat-toolbar>
 
     @if (progress != 0) {
-      <mat-progress-bar mode="determinate"
-        [value]="progress"
-        color="primary"
-        />
+    <mat-progress-bar mode="determinate" [value]="progress" color="primary" />
     }
   </ion-header>
 
@@ -24,7 +21,7 @@
         <ion-tab-button
           tab="checklist"
           [routerLink]="['checklist/primeiro-mandamento']"
-          >
+        >
           <mat-icon>check</mat-icon>
           Checklist
         </ion-tab-button>
@@ -33,7 +30,7 @@
           Dicas
         </ion-tab-button>
         <ion-tab-button tab="confissao" routerLink="confissao">
-          <mat-icon svgIcon="cross" />
+          <mat-icon>info</mat-icon>
           Confissão
         </ion-tab-button>
         <ion-tab-button tab="perguntas" routerLink="perguntas">

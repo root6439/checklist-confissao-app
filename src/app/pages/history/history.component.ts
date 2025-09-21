@@ -6,9 +6,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { IonContent } from '@ionic/angular/standalone';
 import { take } from 'rxjs';
-import { History } from '../../shared/models/History';
 import { DatePipe } from '../../shared/pipes/date.pipe';
 import { ShareService } from '../../shared/services/share.service';
+import { History } from './models/history';
 import { HistoryService } from './services/history.service';
 
 @Component({
