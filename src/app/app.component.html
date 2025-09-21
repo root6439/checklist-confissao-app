@@ -8,11 +8,12 @@
       <ion-title> A Sagrada Confissão </ion-title>
     </mat-toolbar>
 
-    <mat-progress-bar mode="determinate"
-      [value]="progress"
-      color="primary"
-      *ngIf="progress != 0"
-     />
+    @if (progress != 0) {
+      <mat-progress-bar mode="determinate"
+        [value]="progress"
+        color="primary"
+        />
+    }
   </ion-header>
 
   <ion-content>
@@ -23,7 +24,7 @@
         <ion-tab-button
           tab="checklist"
           [routerLink]="['checklist/primeiro-mandamento']"
-        >
+          >
           <mat-icon>check</mat-icon>
           Checklist
         </ion-tab-button>

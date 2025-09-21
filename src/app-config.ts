@@ -2,9 +2,8 @@ import { provideHttpClient } from '@angular/common/http';
 import {
   ApplicationConfig,
   importProvidersFrom,
-  provideExperimentalZonelessChangeDetection,
+  provideZonelessChangeDetection,
 } from '@angular/core';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {
   RouteReuseStrategy,
   provideRouter,
@@ -18,11 +17,10 @@ import { CustomPreloadingStrategy } from './preload-rule';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withPreloading(CustomPreloadingStrategy)),
-    provideAnimationsAsync(),
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     importProvidersFrom(IonicModule.forRoot({})),
     provideHttpClient(),
-    provideExperimentalZonelessChangeDetection(),
+    provideZonelessChangeDetection(),
   ],
 };

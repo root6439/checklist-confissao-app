@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, OnInit, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -26,10 +26,9 @@ interface IProgressData {
     MatMenuModule,
     MatProgressBarModule,
     RouterModule,
-    CommonModule,
     IonRouterOutlet,
-    IonicModule,
-  ],
+    IonicModule
+],
 })
 export class AppComponent implements OnInit {
   private router = inject(Router);
