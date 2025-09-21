@@ -5,7 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true,
 })
 export class DatePipe implements PipeTransform {
-  transform(value: Date): string {
+  transform(value: Date | string): string {
+    if (typeof value == 'string') {
+      value = new Date(value);
+    }
+
     return `${value.getDate()}/${value.getMonth() + 1}/${value.getFullYear()}`;
   }
 }
